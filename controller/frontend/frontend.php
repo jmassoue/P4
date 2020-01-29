@@ -14,6 +14,7 @@ class Frontend
 	}
 
 
+<<<<<<< HEAD
 	public function postHome(){
 
 		$postsHome = $this->postManager->getPosts();
@@ -26,6 +27,15 @@ class Frontend
 	public function commentView(){
 
 		
+=======
+	public function postAndCommentHome(){
+
+		$postsHome = $this->postManager->getPosts();
+		$commentsHome = $this->commentManager->getComment();
+
+		require('view/frontend/home.php');
+
+>>>>>>> ea943d880097c893997a0d91670cc2a9e76d7df3
 	}
 
 }
