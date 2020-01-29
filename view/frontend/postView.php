@@ -19,45 +19,27 @@
 			 <?php include("view/include/menu.php"); ?>
 		</header>
 			
-		<h1> Les derniers chapitres de mon blog </h1>
+		<div class="news">
+			<h3>
+				<?= htmlspecialchars($post['title']) ?>
+				<em>le <?= $post['creation_date_fr'] ?></em>
+            </h3>
+            
+            <p>
+                <?= nl2br(htmlspecialchars($post['content'])) ?>
+            </p>
+        </div>
 
-		<?php
-		while ($post = $postsHome->fetch())
-		{
-		?>
-			<div class="news">
-				<h2>
-					<?= htmlspecialchars($post['title']) ?>
-					<em> le <?= $post['date_creation'] ?></em>
-				</h2>
+        <h2>Commentaires</h2>
 
-				<p>
-				<?= nl2br(htmlspecialchars($post['content'])) ?>
-				<br/>
-				</p>
-			</div>
-			<em><a href="#">Commentaires</a></em> // a revoir
-
-				<?php
-				while ($comment = $commentsHome->fetch())
-				{
-				?>
-				<h2>
-				<?= htmlspecialchars($comment['user_id']) ?>
-				<em> le <?= $comment=['date_creation'] ?></em>
-				</h2>
-				<p>
-				<?= nl2br(htmlspecialchars($comment['content'])) ?>	
-				</p>
-				
-		<?php
-		}}
-		$posts->closeCursor();
-		?>
-		
-		
-		<footer>
-			<?php include("view/include/footer.php"); ?>
-		</footer>
-	</body>
+        <?php
+        while ($comment = $comments->fetch())
+        {
+        ?>
+            <p><strong><?= htmlspecialchars($comment['user_id']) ?></strong> le <?= $comment['date_creation'] ?></p>
+            <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+        <?php
+        }
+        ?>
+    </body>
 </html>

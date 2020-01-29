@@ -7,7 +7,7 @@
 		if(isset($_GET['action'])){
 
 		}else{
-			$controllerFrontend->postHome();
+			$controllerFrontend->postAndCommentHome();
 		}
 	}
 	catch(Exception $e){
