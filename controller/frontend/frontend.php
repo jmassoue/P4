@@ -14,6 +14,10 @@ class Frontend
 	}
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8178d0bb627918d28798f6d308c2d693ffcce828
 	public function postHome(){
 
 		$postsHome = $this->postManager->getPosts();
@@ -23,12 +27,27 @@ class Frontend
 
 	}
 
+<<<<<<< HEAD
 	public function postcommentsView(){
 
 		$postViewId = getPost($_GET['id_post']);
 		$commentsId = getComments($_GET['id_comment']);
 
 		require('postView.php');
+=======
+	public function commentView(){
+
+		
+=======
+	public function postAndCommentHome(){
+
+		$postsHome = $this->postManager->getPosts();
+		$commentsHome = $this->commentManager->getComment();
+
+		require('view/frontend/home.php');
+
+>>>>>>> ea943d880097c893997a0d91670cc2a9e76d7df3
+>>>>>>> 8178d0bb627918d28798f6d308c2d693ffcce828
 	}
 
 }

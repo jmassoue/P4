@@ -4,6 +4,7 @@ require_once('model/ModelManager.php');
 
 class CommentManager extends ModelManager {
 	
+<<<<<<< HEAD
 	public function getComments($postId){
 
 		$db = $this->connectDb();
@@ -12,6 +13,25 @@ class CommentManager extends ModelManager {
 		$commentsId->execute(array($postId));
    
     	return $commentsId;
+=======
+<<<<<<< HEAD
+	public function getComments(){
+
+		$db = $this->connectDb();
+
+		$commentsHome = $db->query('SELECT id_comment, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\'), content, post_id, user_id, AS date_creation FROM comment ORDER BY id_comment WHERE post_id=?' );
+   
+    	return $commentsPostView;
+=======
+	public function getComment(){
+
+		$db = $this->connectDb();
+
+		$commentsHome = $db->query('SELECT id_comment, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\'), content, post_id, user_id, AS date_creation FROM comment ORDER BY id_comment DESC LIMIT 0, 5' );
+   
+    	return $commentsHome;
+>>>>>>> ea943d880097c893997a0d91670cc2a9e76d7df3
+>>>>>>> 8178d0bb627918d28798f6d308c2d693ffcce828
 	}
 
 

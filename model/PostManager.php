@@ -15,6 +15,7 @@ class PostManager extends ModelManager {
 
 	}
 
+<<<<<<< HEAD
 	public function getPost($postId){
 
 		$db = $this->connectDb();
@@ -26,6 +27,8 @@ class PostManager extends ModelManager {
 		return $postViewId;
 	}
 
+=======
+>>>>>>> 8178d0bb627918d28798f6d308c2d693ffcce828
 	public function allPosts(){
 
 		$db = $this->connectDb();

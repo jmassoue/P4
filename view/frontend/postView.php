@@ -18,8 +18,11 @@
 		<header>
 			 <?php include("view/include/menu.php"); ?>
 		</header>
+<<<<<<< HEAD
 
 		<p><a href ="index.php">Retour à la liste des chapitres</a></p>
+=======
+>>>>>>> 8178d0bb627918d28798f6d308c2d693ffcce828
 			
 		<div class="news">
 			<h3>
@@ -35,7 +38,11 @@
         <h2>Commentaires</h2>
 
         <?php
+<<<<<<< HEAD
         while ($comment = $commentsId->fetch())
+=======
+        while ($comment = $comments->fetch())
+>>>>>>> 8178d0bb627918d28798f6d308c2d693ffcce828
         {
         ?>
             <p><strong><?= htmlspecialchars($comment['user_id']) ?></strong> le <?= $comment['date_creation'] ?></p>
@@ -43,8 +50,11 @@
         <?php
         }
         ?>
+<<<<<<< HEAD
     	<footer>
 			<?php include("view/include/footer.php"); ?>
 		</footer>
+=======
+>>>>>>> 8178d0bb627918d28798f6d308c2d693ffcce828
     </body>
 </html>
