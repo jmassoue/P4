@@ -32,40 +32,16 @@
 				</h2>
 
 				<p>
-				<?= nl2br(htmlspecialchars($post['content'])) ?>
+				<?= nl2br(htmlspecialchars($post['content'])); var_dump($post['id_post']); die;?>
+
+				<a href ="index.php?action=postView&amp;id_post=  <?= $post['id_post'] ?>">En savoir plus</a>
 				<br/>
 				</p>
 			</div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8178d0bb627918d28798f6d308c2d693ffcce828
 			<em><a href="#">Commentaires</a></em> 
 		<?php
 		}
 		$postsHome->closeCursor();
-<<<<<<< HEAD
-=======
-=======
-			<em><a href="#">Commentaires</a></em> // a revoir
-
-				<?php
-				while ($comment = $commentsHome->fetch())
-				{
-				?>
-				<h2>
-				<?= htmlspecialchars($comment['user_id']) ?>
-				<em> le <?= $comment=['date_creation'] ?></em>
-				</h2>
-				<p>
-				<?= nl2br(htmlspecialchars($comment['content'])) ?>	
-				</p>
-				
-		<?php
-		}}
-		$posts->closeCursor();
->>>>>>> ea943d880097c893997a0d91670cc2a9e76d7df3
->>>>>>> 8178d0bb627918d28798f6d308c2d693ffcce828
 		?>
 		
 		

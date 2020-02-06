@@ -1,37 +1,37 @@
 <?php //routeur
 
 	require('controller/frontend/frontend.php');
-	$controllerFrontend = new Frontend;
+	
+class Routeur{
 
-	try{
+	private $frontController;
+
+	public function __construct(){ 
+		$this->frontController = new Frontend;
+		$this->run();
+	}
+
+	public function run(){
+		try{
 		if(isset($_GET['action'])){
-<<<<<<< HEAD
-			if ($_GET['action'] == 'postHome') {
-				postHome();
+
+			if($_GET['action'] == 'postHome') {
+				
+				$this->frontController->postHome();
 			}
 			elseif ($_GET['action'] == 'postViewId') {
-				if (isset($_GET['id_post']) && $_GET['id_comment'] > 0) {
-					postViewId();
+				if(isset($_GET['id_post']) > 0) {
+					$this->frontController->postcommentsView();
 				}
 			}
-	}
-	
-else {
-	$controllerFrontend->postHome();
-}
-=======
-
 		}else{
-<<<<<<< HEAD
-			$controllerFrontend->postHome();
-=======
-			$controllerFrontend->postAndCommentHome();
->>>>>>> ea943d880097c893997a0d91670cc2a9e76d7df3
+			$this->frontController->postHome();
 		}
-	}
-	catch(Exception $e){
+	
+	}catch(Exception $e){
 		die('Erreur :' .$e->getMessage());
 	}
-	
+}}
+
+new Routeur;
 ?>
->>>>>>> 8178d0bb627918d28798f6d308c2d693ffcce828

@@ -15,20 +15,17 @@ class PostManager extends ModelManager {
 
 	}
 
-<<<<<<< HEAD
 	public function getPost($postId){
 
 		$db = $this->connectDb();
 
-		$postId = $db->prepare('SELECT id_post, title, content, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM post WHERE id_post= ?');
-		$postId->execute(array($postId));
-		$postViewId = $postId->fetch();
+		$req = $db->prepare('SELECT id_post, title, content, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM post WHERE id_post= ?');
+		$req->execute(array($postId));
+		$postViewId = $req->fetch();
 
 		return $postViewId;
 	}
 
-=======
->>>>>>> 8178d0bb627918d28798f6d308c2d693ffcce828
 	public function allPosts(){
 
 		$db = $this->connectDb();
