@@ -15,16 +15,21 @@ class Routeur{
 		try{
 		if(isset($_GET['action'])){
 
+
 			if($_GET['action'] == 'postHome') {
 				
 				$this->frontController->postHome();
 			}
 			elseif ($_GET['action'] == 'postViewId') {
-				if(isset($_GET['id_post']) > 0) {
+				if(isset($_GET['id_post']) && $_GET['id_post']> 0) {
 					$this->frontController->postcommentsView();
+				}else{ // si id_post <= 0
+					$this->frontController->postHome();
 				}
+			}else { // si on a un paramètre action inconnu
+				$this->frontController->postHome();
 			}
-		}else{
+		}else{ // si on a pas de paramètre action
 			$this->frontController->postHome();
 		}
 	

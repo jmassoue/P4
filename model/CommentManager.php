@@ -8,7 +8,7 @@ class CommentManager extends ModelManager {
 
 		$db = $this->connectDb();
 
-		$commentsId = $db->prepare('SELECT id_comment, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\'), content, post_id, user_id, AS date_creation FROM comment WHERE post_id=? ORDER BY date_creation');
+		$commentsId = $db->prepare('SELECT id_comment,content, post_id, user_id, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment WHERE post_id=? ORDER BY date_creation');
 		$commentsId->execute(array($postId));
    
     	return $commentsId;
@@ -19,7 +19,7 @@ class CommentManager extends ModelManager {
 
 		$db = $this->connectDb();
 
-		$comments = $db->query('SELECT id_comment, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\'), content, post_id, user_id, AS date_creation FROM comment ORDER BY id_comment');
+		$comments = $db->query('SELECT id_comment,content, post_id, user_id, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment ORDER BY id_comment');
    
     	return $comments;
 	}
@@ -28,7 +28,7 @@ class CommentManager extends ModelManager {
 
 		$db = $this->connectDb();
 
-		$addComment = $db->query('INSERT id_comment, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\'), content, post_id, user_id, AS date_creation FROM comment ORDER BY id_comment');
+		$addComment = $db->query('INSERT id_comment, content, post_id, user_id, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment ORDER BY id_comment');
    
     	return $addComment;
 
@@ -38,7 +38,7 @@ class CommentManager extends ModelManager {
 
 		$db = $this->connectDb();
 
-		$updateComment = $db->query('UPDATE id_comment, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\'), content, post_id, user_id, AS date_creation FROM comment ORDER BY id_comment');
+		$updateComment = $db->query('UPDATE id_comment, content, post_id, user_id, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment ORDER BY id_comment');
    
     	return $updateComment;
 
@@ -48,7 +48,7 @@ class CommentManager extends ModelManager {
 
 		$db = $this->connectDb();
 
-		$deleteComment = $db->query('DELETE id_comment, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\'), content, post_id, user_id, AS date_creation FROM comment ORDER BY id_comment');
+		$deleteComment = $db->query('DELETE id_comment, content, post_id, user_id, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment ORDER BY id_comment');
    
     	return $deleteComment;
 

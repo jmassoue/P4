@@ -26,10 +26,10 @@ class Frontend
 	public function postcommentsView(){
 
 		$postViewId = $this->postManager->getPost($_GET['id_post']);
-		$commentsId = $this->commentManager->getComments($_GET['id_comment']);
+		$commentsId = $this->commentManager->getComments($_GET['id_post']);
+		
 
-
-		require('view/Frontend/postView.php');
+	require('view/frontend/postView.php');
 	}
 
 }

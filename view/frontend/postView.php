@@ -34,15 +34,11 @@
 
         <h2>Commentaires</h2>
 
-        <?php
-		while ($comment = $commentsId->fetch());
-        {
-        ?>
-            <p><strong><?= htmlspecialchars($comment['user_id']) ?></strong> le <?= $comment['date_creation'] ?></p>
-            <p><?= nl2br(htmlspecialchars($comment['content'])) ?></p>
-        <?php
-        }
-        ?>
+        <?php while($comment = $commentsId->fetch()):?>
+        <p><strong><?= htmlspecialchars($comment['user_id']) ?></strong> le <?=$comment['date_creation'] ?></p>
+        <p> <?= nl2br(htmlspecialchars($comment['content'])) ?></p>
+
+        <?php endwhile; ?>
     	<footer>
 			<?php include("view/include/footer.php"); ?>
 		</footer>

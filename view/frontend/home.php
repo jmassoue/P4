@@ -32,9 +32,9 @@
 				</h2>
 
 				<p>
-				<?= nl2br(htmlspecialchars($post['content'])); var_dump($post['id_post']); die;?>
+				<?= nl2br(htmlspecialchars($post['content'])); ?>
 
-				<a href ="index.php?action=postView&amp;id_post=  <?= $post['id_post'] ?>">En savoir plus</a>
+				<a href ="index.php?action=postViewId&amp;id_post=<?= $post['id_post'] ?>">En savoir plus</a>
 				<br/>
 				</p>
 			</div>
