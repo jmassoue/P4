@@ -34,6 +34,7 @@
 
         <h2>Commentaires</h2>
 
+<<<<<<< HEAD
         <form action="index.php?action=addComment&amp;id=<?= $postViewId['id_post'] ?>" method="post">
         	<div>
         		<label for="user_id">Auteur</label><br />
@@ -48,6 +49,8 @@
         	</div>
         </form>
 
+=======
+>>>>>>> 13a7b56bb96358324dcd346f6f8ff4e5b558a060
         <?php while($comment = $commentsId->fetch()):?>
         <p><strong><?= htmlspecialchars($comment['user_id']) ?></strong> le <?=$comment['date_creation'] ?></p>
         <p> <?= nl2br(htmlspecialchars($comment['content'])) ?></p>

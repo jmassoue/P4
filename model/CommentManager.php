@@ -24,6 +24,7 @@ class CommentManager extends ModelManager {
     	return $comments;
 	}
 
+<<<<<<< HEAD
 	public function addComments($postId, $user_id, $content){
 
 		$db = $this->connectDb();
@@ -32,6 +33,15 @@ class CommentManager extends ModelManager {
 		$affectedLines = $addComments->execute(array($postId, $user_id, $content));
    
     	return $affectedLines;
+=======
+	public function addComment(){
+
+		$db = $this->connectDb();
+
+		$addComment = $db->query('INSERT id_comment, content, post_id, user_id, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment ORDER BY id_comment');
+   
+    	return $addComment;
+>>>>>>> 13a7b56bb96358324dcd346f6f8ff4e5b558a060
 
 	}
 

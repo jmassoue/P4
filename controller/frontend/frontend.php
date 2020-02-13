@@ -32,6 +32,7 @@ class Frontend
 	require('view/frontend/postView.php');
 	}
 
+<<<<<<< HEAD
 	public function addComment($postId, $user_id, $content){
 
 		$affectedLines = $this->commentManager->addComments($postId, $user_id, $content);
@@ -46,6 +47,8 @@ class Frontend
 	require('view/frontend/postView.php');
 	}
 
+=======
+>>>>>>> 13a7b56bb96358324dcd346f6f8ff4e5b558a060
 }
 
 ?>

@@ -38,7 +38,11 @@
 				<br/>
 				</p>
 			</div>
+<<<<<<< HEAD
 			<em><a href="index.php?action=postViewId&amp;id_post=<?= $post['id_post'] ?>">Commentaires</a></em> 
+=======
+			<em><a href="#">Commentaires</a></em> 
+>>>>>>> 13a7b56bb96358324dcd346f6f8ff4e5b558a060
 		<?php
 		}
 		$postsHome->closeCursor();

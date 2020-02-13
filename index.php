@@ -20,6 +20,7 @@ class Routeur{
 				
 				$this->frontController->postHome();
 			}
+<<<<<<< HEAD
 
 			elseif ($_GET['action'] == 'addComment') {
 				if(isset($_GET['id_post']) && $_GET['id_post']> 0) {
@@ -34,6 +35,8 @@ class Routeur{
 					$this->frontController->postHome();
 				}
 			}
+=======
+>>>>>>> 13a7b56bb96358324dcd346f6f8ff4e5b558a060
 			elseif ($_GET['action'] == 'postViewId') {
 				if(isset($_GET['id_post']) && $_GET['id_post']> 0) {
 					$this->frontController->postcommentsView();
