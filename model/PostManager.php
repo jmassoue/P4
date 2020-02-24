@@ -35,6 +35,7 @@ class PostManager extends ModelManager {
 		return $posts;
 	}
 
+<<<<<<< HEAD
 	public function addPosts($title, $user_id, $content){
 
 		$db = $this->connectDb();
@@ -43,6 +44,17 @@ class PostManager extends ModelManager {
 		
     	return $affectedPost;
     }
+=======
+	public function addPosts(){
+
+		$db = $this->connectDb();
+
+		$addPosts = $db->query('INSERT id_post, title, content, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM post ORDER BY id_post');
+   
+    	return $addPosts;
+
+	}
+>>>>>>> 38d7719520a0a353160a62392d2e89c0dd6cdd7f
 
 	public function updatePost(){
 
