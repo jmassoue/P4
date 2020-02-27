@@ -49,15 +49,18 @@ class Frontend
 
 	public function addPosts(){
 
-		$affectedPost = $this->postManager->addPosts($_POST['title'], $_POST['user_id'], $_POST['content']);
-
-		if(isset($_POST['title']) && !empty($_POST['title']) && isset($_POST['user_id']) &&  !empty($_POST['user_id']) && isset($_POST['content'])) && !empty($_POST['content']) {
-						$this->frontController->addPosts($_GET['title'], $_POST['user_id'], $_POST['content']);
-		}
-		if ($affectedPost === false) {
-			die('Impossible d\'ajouter l\'article !');
 		
-	}
+		if(isset($_POST['title']) && !empty($_POST['title']) && isset($_POST['user_id']) &&  !empty($_POST['user_id']) && isset($_POST['content']) && !empty($_POST['content'])) {
+		
+		if(empty($_POST['title']) || empty($_POST['content'])) {
+			echo('Impossible d\'ajouter l\'article !');
+		
+
+		}else {
+			
+			$affectedPost = $this->postManager->addPosts($_POST['title'], $_POST['user_id'], $_POST['content']);
+
+		}}
 	require('view/frontend/addPost.php');
 	}
 
