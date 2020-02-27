@@ -34,12 +34,7 @@
 
         <h2>Commentaires</h2>
 
-<<<<<<< HEAD
         <form action="index.php?action=addComment&amp;id_post=<?= $postViewId['id_post'] ?>" method="post">
-=======
-<<<<<<< HEAD
-        <form action="index.php?action=addComment&amp;id=<?= $postViewId['id_post'] ?>" method="post">
->>>>>>> 38d7719520a0a353160a62392d2e89c0dd6cdd7f
         	<div>
         		<label for="user_id">Auteur</label><br />
         		<input type="text" id="author" name="author" />
@@ -53,15 +48,8 @@
         	</div>
         </form>
 
-<<<<<<< HEAD
         <?php while($comment = $commentsId->fetch()):?>
         <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?=$comment['date_creation'] ?></p>
-=======
-=======
->>>>>>> 13a7b56bb96358324dcd346f6f8ff4e5b558a060
-        <?php while($comment = $commentsId->fetch()):?>
-        <p><strong><?= htmlspecialchars($comment['user_id']) ?></strong> le <?=$comment['date_creation'] ?></p>
->>>>>>> 38d7719520a0a353160a62392d2e89c0dd6cdd7f
         <p> <?= nl2br(htmlspecialchars($comment['content'])) ?></p>
 
         <?php endwhile; ?>
