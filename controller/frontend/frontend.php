@@ -49,16 +49,21 @@ class Frontend
 
 	public function addPosts(){
 
-		$affectedPost = $this->postManager->addPosts($_POST['title'], $_POST['user_id'], $_POST['content']);
-
-		if(isset($_POST['title']) && !empty($_POST['title']) && isset($_POST['user_id']) &&  !empty($_POST['user_id']) && isset($_POST['content'])) && !empty($_POST['content']) {
-						$this->frontController->addPosts($_GET['title'], $_POST['user_id'], $_POST['content']);
-		}
-		if ($affectedPost === false) {
-			die('Impossible d\'ajouter l\'article !');
 		
-	}
+		if(isset($_POST['title']) && !empty($_POST['title']) && isset($_POST['user_id']) &&  !empty($_POST['user_id']) && isset($_POST['content']) && !empty($_POST['content'])) {
+				$affectedPost = $this->postManager->addPosts($_POST['title'], $_POST['user_id'], $_POST['content']);
+		
+		}else {
+			echo('au moin un champs est vide');
+		}
 	require('view/frontend/addPost.php');
+	}
+
+	public function reported($id_comment){
+
+		$reported = $this->commentManager->reportedComment($id_comment);
+		
+	require('view/frontend/reported.php');
 	}
 
 }

@@ -34,7 +34,14 @@ class Routeur{
 					$this->frontController->postHome();
 				}
 			}
-			elseif ($_GET['action'] === 'addPosts') {
+			elseif ($_GET['action'] === 'reported') {
+				if(isset($_GET['id_comment']) && $_GET['id_comment'] > 0) {
+					$this->frontController->reported($_GET['id_comment']);
+				}else{ // si id_comment <=0
+					$this->frontController->postHome();
+				}
+			}
+			elseif ($_GET['action'] === 'addPost') {
 				$this->frontController->addPosts();
 			}
 			elseif ($_GET['action'] === 'postViewId') {
