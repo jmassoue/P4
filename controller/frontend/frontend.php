@@ -51,11 +51,24 @@ class Frontend
 
 		
 		if(isset($_POST['title']) && !empty($_POST['title']) && isset($_POST['user_id']) &&  !empty($_POST['user_id']) && isset($_POST['content']) && !empty($_POST['content'])) {
+<<<<<<< HEAD
 				$affectedPost = $this->postManager->addPosts($_POST['title'], $_POST['user_id'], $_POST['content']);
 		
 		}else {
 			echo('au moin un champs est vide');
 		}
+=======
+		
+		if(empty($_POST['title']) || empty($_POST['content'])) {
+			echo('Impossible d\'ajouter l\'article !');
+		
+
+		}else {
+			
+			$affectedPost = $this->postManager->addPosts($_POST['title'], $_POST['user_id'], $_POST['content']);
+
+		}}
+>>>>>>> b66b97c27d9b6d47945a68ff78cb51b988117ecf
 	require('view/frontend/addPost.php');
 	}
 
