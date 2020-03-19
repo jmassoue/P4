@@ -8,7 +8,7 @@ class CommentManager extends ModelManager {
 
 		$db = $this->connectDb();
 
-		$commentsId = $db->prepare('SELECT id_comment,content, post_id, author, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment WHERE post_id=? ORDER BY date_creation');
+		$commentsId = $db->prepare('SELECT id_comment,content, post_id, author, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment WHERE post_id=? AND reported= false ORDER BY date_creation');
 		$commentsId->execute(array($postId));
    
     	return $commentsId;
@@ -34,13 +34,14 @@ class CommentManager extends ModelManager {
 
 	}
 
-	public function updateComment(){
+	public function reportedComment($id_comment){
 
 		$db = $this->connectDb();
 
-		$updateComment = $db->query('UPDATE id_comment, content, post_id, author, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment ORDER BY id_comment');
+		$reported = $db->prepare('UPDATE comment SET reported = 1 WHERE id_comment = ?'); // 1 = true 0 = false
+		$reported->execute(array($id_comment));
    
-    	return $updateComment;
+    	return $reported;
 
     }
 

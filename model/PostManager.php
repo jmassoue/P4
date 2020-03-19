@@ -44,13 +44,14 @@ class PostManager extends ModelManager {
     	return $affectedPost;
     }
 
-	public function updatePost(){
+	public function updatePost($title, $content, $id_post){
 
 		$db = $this->connectDb();
 
-		$updatePost = $db->query('UPDATE id_post, title, content, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM post ORDER BY id_post');
-   
-    	return $updatePost;
+		$update = $db->prepare('UPDATE post SET(title, content, date_modification) VALUES(?, ?, NOW()) WHERE id_post = ?'); 
+		$update->execute(array($title, $content, $id_post));
+		
+		return $update;
 
     }
 

@@ -2,23 +2,18 @@
 <html lang="fr">
 
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width">
-		<link rel="stylesheet" href="style.css" />
-		<link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-			integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-		<meta name="description"
-			content="Retrouver tous les chapitres de mon livre 'Billet simple pour l'Alaska' pour partager ce magnifique voyage ensemble"/>
-		<title>Billet simple pour l'Alaska</title>
+		<?php include("view/include/head.php"); ?>
 	</head>
 
 	<body>
-		
-		<header>
-			 <?php include("view/include/menu.php"); ?>
-		</header>
-			
+		<div class="container menu">
+		<nav class="nav justify-content-center nav-pills nav-justified">
+			 <!--<?php include("view/include/menu.php"); ?> -->
+			 <a href="index.php?action=home" class="nav-link focus nav-item">Accueil</a>
+			 <a href="index.php?action=pageConnexion" class="nav-link nav-item">Connexion</a>
+		</nav>
+		</div>
+		<img src="public/images/alaska.jpg" alt="photomontagnealaska" class="alaska col-lg-12">
 		<h1> Les derniers chapitres de mon blog </h1>
 
 		<?php
