@@ -49,16 +49,43 @@ class Frontend
 
 	public function addPosts(){
 
-		$affectedPost = $this->postManager->addPosts($_POST['title'], $_POST['user_id'], $_POST['content']);
-
-		if(isset($_POST['title']) && !empty($_POST['title']) && isset($_POST['user_id']) &&  !empty($_POST['user_id']) && isset($_POST['content'])) && !empty($_POST['content']) {
-						$this->frontController->addPosts($_GET['title'], $_POST['user_id'], $_POST['content']);
-		}
-		if ($affectedPost === false) {
-			die('Impossible d\'ajouter l\'article !');
 		
-	}
+		if(isset($_POST['title']) && !empty($_POST['title']) && isset($_POST['user_id']) &&  !empty($_POST['user_id']) && isset($_POST['content']) && !empty($_POST['content'])) {
+				$affectedPost = $this->postManager->addPosts($_POST['title'], $_POST['user_id'], $_POST['content']);
+		
+		}else {
+			echo('au moin un champs est vide');
+		}
 	require('view/frontend/addPost.php');
+	}
+
+	public function reported($id_comment){
+
+		$reported = $this->commentManager->reportedComment($id_comment);
+		
+	require('view/frontend/reported.php');
+	}
+
+	public function update(){
+
+		$editPost = $this->postManager->getPost($_GET['id_post']);
+		if(isset($_POST['title']) &&  !empty($_POST['title']) && isset($_POST['content']) && !empty($_POST['content'])) {
+			$update = $this->postManager->updatePost($_POST['title'], $_POST['content'], $_GET['id_post']);
+		
+		}else {
+			echo('aucune modification effectuer');
+		}
+	require('view/frontend/editPost.php');
+	}
+
+	public function delete($id_post){
+
+		$deletePost = $this->postManager->getPost($_GET['id_post']);
+		if(isset($_GET['id_post']) && !empty($_GET['id_post'])) {
+			$delete = $this->postManager->deletePost($_GET['id_post']);
+		}
+	
+	require('view/frontend/deletePost.php');
 	}
 
 }

@@ -9,7 +9,7 @@ class PostManager extends ModelManager {
 
 		$db = $this->connectDb();
 
-		$postsHome = $db->query('SELECT id_post, title, content, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM post ORDER BY id_post DESC LIMIT 0, 5' );
+		$postsHome = $db->query('SELECT id_post, title, content, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM post ORDER BY id_post DESC LIMIT 0, 4' );
    
     	return $postsHome;
 
@@ -44,23 +44,25 @@ class PostManager extends ModelManager {
     	return $affectedPost;
     }
 
-	public function updatePost(){
+	public function updatePost($title, $content, $id_post){
 
 		$db = $this->connectDb();
 
-		$updatePost = $db->query('UPDATE id_post, title, content, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM post ORDER BY id_post');
-   
-    	return $updatePost;
+		$update = $db->prepare('UPDATE post SET title = ?, content = ?, date_modification = NOW() WHERE id_post = ?'); 
+		$update->execute(array($_POST['title'], $_POST['content'], $_GET['id_post']));
+		
+		return $update;
 
     }
 
-    public function deletePost(){
+    public function deletePost($id_post){
 
 		$db = $this->connectDb();
 
-		$deletePost = $db->query('DELETE id_post, title, content, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM post ORDER BY id_post');
+		$delete = $db->prepare('DELETE FROM post WHERE id_post = ?');
+		$delete->execute(array($_GET['id_post']));
    
-    	return $deletePost;
+    	return $delete;
 
     }
 }
