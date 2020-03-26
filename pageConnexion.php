@@ -11,7 +11,13 @@ function pageConnexionSubmit($pseudo, $mdp){
 	}
 		else {
 			if ($mdpCorrect){
+<<<<<<< HEAD
 				$_SESSION['id'] = $member['user_id'];
+=======
+				$_SESSION['id'] = $member['id'];
+				$_SESSION['pseudo'] = $member['pseudo'];
+				$_SESSION['admin'] = $member['admin'];
+>>>>>>> 904c56cc315f33245d1229e571147916b93ac3b3
 				header('Location: index.php');
 			}
 				else {
