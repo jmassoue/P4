@@ -16,7 +16,7 @@
 <body>
 
 	<header>
-		<?php include("menu.php"); ?>
+		<?php include("head.php"); ?>
 	</header>
 
 	<footer>
