@@ -14,7 +14,11 @@
         </h3>
             
         <p>
+<<<<<<< HEAD
             <?= nl2br(html_entity_decode($postViewId['content'])) ?>
+=======
+            <?= nl2br(htmlspecialchars($postViewId['content'])) ?>
+>>>>>>> c6c4154db9e076d4329491b79f21a229ebcc21d1
         </p>
         <a href="index.php?action=update&amp;id_post=<?= $postViewId['id_post']?>" > Modifier</a> | <a href="index.php?action=delete&amp;id_post=<?= $postViewId['id_post']?>" > Supprimer</a>
     </div>
