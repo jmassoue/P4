@@ -11,7 +11,19 @@
 	<body>
 		<img src="public/images/alaska.jpg" alt="photomontagnealaska" class="alaska col-lg-12">
 		<h1> Les derniers chapitres du blog </h1>
+<<<<<<< HEAD
 		<br>
+=======
+<<<<<<< HEAD
+		<br>
+=======
+<<<<<<< HEAD
+		<br>
+=======
+
+>>>>>>> 3f3938132ad4069757855660105d314c1dfcc789
+>>>>>>> c6c4154db9e076d4329491b79f21a229ebcc21d1
+>>>>>>> 8a4b9715fd411f8bf4689dba4434047aaf58f228
 		<?php
 		while ($post = $postsHome->fetch())
 		{
