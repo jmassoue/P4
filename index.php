@@ -21,6 +21,10 @@ class Routeur{
 				$this->frontController->postHome();
 			}
 
+			elseif ($_GET['action'] === 'newMember') {
+				$this->frontController->addMember();
+			}
+
 			elseif ($_GET['action'] === 'addComment') { // ajout d'un commentaire
 				if(isset($_GET['id_post']) && $_GET['id_post']> 0) {
 					if(!empty($_POST['author']) && !empty($_POST['content'])) {
@@ -34,7 +38,25 @@ class Routeur{
 					$this->frontController->postHome();
 				}
 			}
-			elseif ($_GET['action'] === 'addPosts') {
+			elseif ($_GET['action'] === 'reported') {
+				if(isset($_GET['id_comment']) && $_GET['id_comment'] > 0) {
+					$this->frontController->reported($_GET['id_comment']);
+				}else{ // si id_comment <=0
+					$this->frontController->postHome();
+				}
+			}
+			elseif ($_GET['action'] === 'update') {
+				if(isset($_GET['id_post']) && $_GET['id_post'] > 0) {
+					$this->frontController->update($_GET['id_post']);
+				}else{ // si id_post <=0
+					$this->frontController->postHome();
+				}
+			}
+			elseif ($_GET['action'] === 'delete') {
+				$this->frontController->delete();
+				
+			}
+			elseif ($_GET['action'] === 'addPost') {
 				$this->frontController->addPosts();
 			}
 			elseif ($_GET['action'] === 'postViewId') {
