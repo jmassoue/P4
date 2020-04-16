@@ -1,0 +1,30 @@
+/* différentes polices utilisées*/
+@font-face
+{
+	font-family: 'Roboto', sans-serif;
+
+}
+
+/* Eléments principaux de la page*/
+body 
+{
+	font-family: 'Roboto', sans-serif;
+
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.alaska{
+	padding-bottom: 30px;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+img {
+	vertical-align: middle;
+	border-style: none;
+}
