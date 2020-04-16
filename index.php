@@ -25,10 +25,13 @@ class Routeur{
 				$this->frontController->addMember();
 			}
 
+<<<<<<< HEAD
 			elseif ($_GET['action'] === 'log') {
 				$this->frontController->verifyMember();
 			}
 
+=======
+>>>>>>> a3a27841be24c6f94a8397036165d1e68cb0b033
 			elseif ($_GET['action'] === 'addComment') { // ajout d'un commentaire
 				if(isset($_GET['id_post']) && $_GET['id_post']> 0) {
 					if(!empty($_POST['author']) && !empty($_POST['content'])) {
