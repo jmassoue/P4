@@ -1,6 +1,5 @@
 <?php 
-session_start();
- ?>
+?>
 <!DOCTYPE html> <!-- view -->
 <html lang="fr">
     <body>

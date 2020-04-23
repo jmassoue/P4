@@ -20,20 +20,15 @@ class Frontend
 		
 		if(isset($_POST['pseudo']) && !empty($_POST['pseudo']) && isset($_POST['password']) &&  !empty($_POST['password'])) {
 		
-		if(empty($_POST['pseudo']) || empty($_POST['password'])) {
-			echo('Impossible d\'ajouter le nouveau membre !');
+		$affectedMember = $this->userManager->addMember($_POST['pseudo'], password_hash($_POST['password'], PASSWORD_DEFAULT));
 		
-
-		}else {
-			
-			$affectedMember = $this->userManager->addMember($_POST['pseudo'], password_hash($_POST['password'], PASSWORD_DEFAULT));
-		
-		}}
+		}
 
 	require('view/frontend/log.php');
 	}
 
-	public function verifyMember(){
+
+	public function Connexion(){
 
 		if(isset($_POST['connexion']))
 		{
