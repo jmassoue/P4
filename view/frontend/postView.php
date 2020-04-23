@@ -4,16 +4,16 @@ session_start();
 <!DOCTYPE html> <!-- view -->
 <html lang="fr">
 
-	<head>
-		<?php include("view/include/head.php"); ?>
-	</head>
+    <head>
+        <?php include("view/include/head.php"); ?>
+    </head>
 
-	<body>
-		
-	<div class="news">
-		<h3>
-			<?= htmlspecialchars($postViewId['title']) ?>
-			<em>le <?= $postViewId['date_creation'] ?></em>
+    <body>
+        
+    <div class="news">
+        <h3>
+            <?= htmlspecialchars($postViewId['title']) ?>
+            <em>le <?= $postViewId['date_creation'] ?></em>
         </h3>
             
         <p>
@@ -27,14 +27,14 @@ session_start();
     <form action="index.php?action=addComment&amp;id_post=<?= $postViewId['id_post'] ?>" method="post">
         <div>
             <label for="user_id">Auteur</label><br />
-        	<input type="text" id="author" name="author" />
+            <input type="text" id="author" name="author" />
         </div>
         <div>
-        	<label for="content">Commentaire</label><br />
-        	<textarea id="content" name="content"></textarea>
+            <label for="content">Commentaire</label><br />
+            <textarea id="content" name="content"></textarea>
         </div>
         <div>
-        	<input type="submit" />
+            <input type="submit" />
         </div>
     </form>
 
@@ -46,7 +46,7 @@ session_start();
     <?php endwhile; ?>
     
     <footer class="col-lg-12 footer">
-		<?php include("view/include/footer.php"); ?>
-	</footer>
+        <?php include("view/include/footer.php"); ?>
+    </footer>
     </body>
 </html>

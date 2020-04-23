@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+/* différentes polices utilisées*/
+@font-face
+{
+	font-family: 'Roboto', sans-serif;
+
+}
+
+/* Eléments principaux de la page*/
+body 
+{
+	font-family: 'Roboto', sans-serif;
+
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+>>>>>>> 7dab359d2a432c74ed779d0409eee4ee79eaa67a
 .alaska{
 	padding-bottom: 30px;
 	width: 100%;

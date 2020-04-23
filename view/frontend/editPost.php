@@ -4,13 +4,13 @@ session_start();
 <!DOCTYPE html> <!-- view -->
 <html lang="fr">
 
-	<head>
-		<?php include("view/include/head.php"); ?>
-	</head>
+    <head>
+        <?php include("view/include/head.php"); ?>
+    </head>
 
-	<body>
-		
-		<h2>Posts</h2>
+    <body>
+        
+        <h2>Posts</h2>
 
         <form action="index.php?action=update&amp;id_post=<?= $_GET['id_post']?>" method="post">
             <div>
@@ -24,10 +24,10 @@ session_start();
             <div>
                 <input type="submit" />
             </div>
-        </form>	
+        </form> 
         
-		<footer class="col-lg-12 footer">
-			<?php include("view/include/footer.php"); ?>
-		</footer>
-	</body>
+        <footer class="col-lg-12 footer">
+            <?php include("view/include/footer.php"); ?>
+        </footer>
+    </body>
 </html>

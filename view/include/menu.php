@@ -16,7 +16,7 @@
         <div class="container menu">
             <nav class="nav justify-content-center nav-pills nav-justified">
                 <a href="../../index.php" class="nav-link focus nav-item">Accueil</a>
-                <a href="../frontend/log.php" class="nav-link nav-item">Connexion</a>
+                <a href="index.php?action=newMember" class="nav-link nav-item">Connexion</a>
             </nav>
         </div>
     </head>

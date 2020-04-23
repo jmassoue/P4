@@ -1,5 +1,5 @@
 <?php //routeur
-
+session_start();
 	require('controller/frontend/frontend.php');
 	
 class Routeur{

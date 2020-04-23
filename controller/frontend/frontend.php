@@ -26,7 +26,7 @@ class Frontend
 
 		}else {
 			
-			$affectedMember = $this->userManager->addMember($_POST['pseudo'], $_POST['password']);
+			$affectedMember = $this->userManager->addMember($_POST['pseudo'], password_hash($_POST['password'], PASSWORD_DEFAULT));
 		
 		}}
 
@@ -46,7 +46,8 @@ class Frontend
 				if($isPasswordCorrect = true);
 				{
 					$_SESSION['pseudo'] = $userinfo['pseudo'];
-		        	$_SESSION['password'] = $userinfo['password']; 
+					$_SESSION['role'] = $userinfo['role_id'];
+		        	 
 				}
 			}
 			else
