@@ -26,7 +26,7 @@ class Routeur{
 			}
 
 			elseif ($_GET['action'] === 'log') {
-				$this->frontController->verifyMember();
+				$this->frontController->connexion();
 			}
 
 			elseif ($_GET['action'] === 'addComment') { // ajout d'un commentaire

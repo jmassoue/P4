@@ -28,28 +28,19 @@ class Frontend
 	}
 
 
-	public function Connexion(){
+	public function connexion(){
 
-		if(isset($_POST['connexion']))
-		{
-			$pseudo = htmlspecialchars($_POST['pseudo']);
-			$password = $_POST['password'];
+		$pseudo = htmlspecialchars($_POST['pseudo']);
+		$password = $_POST['password'];
 			if(!empty($pseudo) AND !empty($password))
 			{
-				$checkMember = $this->userManager->verifyMember();
-				$isPasswordCorrect = password_verify($_POST['password'], $checkMember['password']);
-				if($isPasswordCorrect = true);
-				{
-					$_SESSION['pseudo'] = $userinfo['pseudo'];
-					$_SESSION['role'] = $userinfo['role_id'];
-		        	 
-				}
+				$checkMember = $this->userManager->connexion($pseudo, $password);
 			}
 			else
 			{
 				die("Tous les champs doivent être complétés !");
 			}
-		}
+		
 	require('view/frontend/log.php');
 	}
 

@@ -13,6 +13,9 @@
 		<div class="container_post">
 			
 			<h1 class="col-lg-12"> Les derniers chapitres du blog </h1>
+			<?php
+			echo('Bonjour: ' . $_SESSION['pseudo']);
+			?>
 				<br>
 				<?php
 				while ($post = $postsHome->fetch())

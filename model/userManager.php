@@ -34,15 +34,33 @@ class UserManager extends ModelManager {
       
   //  Récupération de l'utilisateur et de son pass hashé
       
-    public function Connexion(){
-
+    public function connexion($pseudo, $password){
+      
       $db = $this->connectDb();
 
-      $reqUser = $db->prepare('SELECT * FROM membres WHERE pseudo = ? AND password = ?');
-      $reqUser->execute(array($_POST['pseudo'], $_POST['password']));
-      $checkMember = $reqUser->fetch();
+      $reqUser = $db->prepare('SELECT * FROM membres WHERE pseudo = ?');
+      $reqUser->execute(array($pseudo));
+      $checkMember = $reqUser->fetch(PDO::FETCH_OBJ);
 
-      return $checkMember;
+      if ($checkMember != NULL) {
+        if(password_verify($password, $checkMember->password)){
+          session_start();
+          $reqUser->execute(array($pseudo));
+
+          $dataUser = $reqUser->fetch(PDO::FETCH_OBJ);
+          $_SESSION['id'] = $dataUser->id;
+          $_SESSION['pseudo'] = $dataUser->pseudo;
+
+          header('Location: index.php');
+
+        }
+        else{
+          throw new Exception('Mauvais mot de passe');
+        }
+      }
+      else{
+        throw new Exception('Mauvais pseudo');
+      }
       
     }
 
