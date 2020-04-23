@@ -1,17 +1,104 @@
-<nav id="menu">        
-    <div class="element_menu">
-        <h3>Les chapitres de mon aventures</h3>
-        <ul>
-            <li><a href="#">Chapitre I</a></li>
-            <li><a href="#">Chapitre II</a></li>
-            <li><a href="#">Chapitre III</a></li>
-           	<li><a href="#">Chapitre IV</a></li>
-            <li><a href="#">Chapitre V</a></li>
-            <li><a href="#">Chapitre VI</a></li>
-            <li><a href="#">Chapitre VII</a></li>
-            <li><a href="#">Chapitre VIII</a></li>
-            <li><a href="#">Chapitre IX</a></li>
-            <li><a href="#">Chapitre X</a></li>
-        </ul>
-    </div>    
-</nav>
+<!DOCTYPE html> <!-- view -->
+<html lang="fr">
+
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+                integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+                content="Retrouver tous les chapitres de mon livre 'Billet simple pour l'Alaska' pour partager ce magnifique voyage ensemble"/>
+    <title>Billet simple pour l'Alaska</title>
+        <div class="container menu">
+            <nav class="nav justify-content-center nav-pills nav-justified">
+                <a href="../../index.php" class="nav-link focus nav-item">Accueil</a>
+                <a href="../frontend/log.php" class="nav-link nav-item">Connexion</a>
+            </nav>
+        </div>
+    </head>
+
+    <body>  
+    <div class="container_sommaire"> 
+         <h1>Les chapitres de mon aventures</h1> 
+         <div class="EveryPosts"> 
+            <div class="chapter justify-content-center">
+                <ul>
+                    <li>
+                        <a href="../../index.php?action=postViewId&id_post=20" class="everyPosts nav-link">Chapitre X</a>
+                    </li>
+                </ul>
+            </div>
+             <div class="chapter justify-content-center">
+                <ul>
+                    <li>
+                        <a href="../../index.php?action=postViewId&id_post=19" class="everyPosts nav-link">Chapitre IX</a>
+                    </li>
+                </ul>
+            </div>
+             <div class="chapter justify-content-center">
+                <ul>
+                    <li>
+                        <a href="../../index.php?action=postViewId&id_post=18" class="everyPosts nav-link">Chapitre VIII</a>
+                    </li>
+                </ul>
+            </div>
+             <div class="chapter justify-content-center">
+                <ul>
+                    <li>
+                        <a href="../../index.php?action=postViewId&id_post=17" class="everyPosts nav-link">Chapitre VII</a>
+                    </li>
+                </ul>
+            </div>
+             <div class="chapter justify-content-center">
+                <ul>
+                    <li>
+                        <a href="../../index.php?action=postViewId&id_post=16" class="everyPosts nav-link">Chapitre VI</a>
+                    </li>
+                </ul>
+            </div>
+             <div class="chapter justify-content-center">
+                <ul>
+                    <li>
+                        <a href="../../index.php?action=postViewId&id_post=15" class="everyPosts nav-link">Chapitre V</a>
+                    </li>
+                </ul>
+            </div>
+             <div class="chapter justify-content-center">
+                <ul>
+                    <li>
+                        <a href="../../index.php?action=postViewId&id_post=14" class="everyPosts nav-link">Chapitre IV</a>
+                    </li>
+                </ul>
+            </div>
+             <div class="chapter justify-content-center">
+                <ul>
+                    <li>
+                        <a href="../../index.php?action=postViewId&id_post=13" class="everyPosts nav-link">Chapitre III</a>
+                    </li>
+                </ul>
+            </div>
+             <div class="chapter justify-content-center">
+                <ul>
+                    <li>
+                        <a href="../../index.php?action=postViewId&id_post=12" class="everyPosts nav-link">Chapitre II</a>
+                    </li>
+                </ul>
+            </div>
+             <div class="chapter justify-content-center">
+                <ul>
+                    <li>
+                        <a href="../../index.php?action=postViewId&id_post=11" class="everyPosts nav-link">Chapitre I</a>
+                    </li>
+                </ul>
+            </div>
+        </div>    
+    </div>
+    <footer class="col-lg-12 footer">
+            <?php include("footer.php"); ?>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,211 @@
+/* différentes polices utilisées*/
+@font-face
+{
+	font-family: 'Roboto', sans-serif;
+
+}
+
+/* Eléments principaux de la page*/
+body 
+{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    text-align: left;
+
+}
+
+.footer{
+    text-align: center;
+    margin-top: 20px;
+    background-color:#2980b9;
+}
+
+h1 {
+    text-align: center;
+    color:#007bff;
+}
+
+h2 {
+    color: #007bff;
+}
+
+/* Menu */
+
+
+
+.container_menu {
+	width: 100%;
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 30px;
+}
+
+.justify-content-center{
+	justify-content: center !important;
+}
+.nav {
+
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+
+a {
+    color:#007bff;
+    text-decoration: none;
+
+}
+
+a:hover , a:focus{
+    color: white;
+    text-decoration: underline;
+    background-color: #2980b9 ;
+}
+
+.nav-justified .nav-item {
+    
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-pills .nav-item {
+    border-radius: .25rem;
+}
+
+.nav-item {
+    display: block;
+    padding: .5rem 1rem;
+}
+
+
+.alaska{
+	padding-bottom: 30px;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	
+}
+
+img {
+	vertical-align: middle;
+	border-style: none;
+}
+
+/*Post*/
+
+.news a{
+	color :#2980b9;
+	text-decoration: none;
+    background-color: transparent;
+}
+
+a#commentaires {
+	color :#2980b9;
+	text-decoration: none;
+    background-color: transparent; 
+}
+
+#date {
+    color :#2980b9;
+    text-decoration-line: underline;
+    background-color: transparent; 
+}
+
+.container_post{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row{
+    width: 100%;
+    margin-left: 0%;
+    display: flex;
+}
+
+
+.news{
+    height: 300px;
+    overflow: auto;
+    margin:auto;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    border:3px solid #2980b9;
+    border-radius: 30px;
+    background-color: rgba(240,244,245,10);
+}
+
+/* Sommaire */
+
+
+.container_sommaire{
+    width: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.EveryPosts{
+    margin-top: 50px;
+    height: 500px;
+    overflow: auto;
+    background-color:rgba(240,244,245,10);
+    border:1px solid #007bff;
+    margin-bottom: 40px;
+
+}
+
+.chapter{
+    width: 100%;
+    margin-left: 0px;
+}
+
+.everyPosts{
+    font-size: 1.5em;
+    
+}
+
+.EveryPosts a{
+    text-decoration: none;
+    background-color: transparent;
+    color:#007bff;
+    text-align: center;
+}
+
+li{
+    text-align: center;
+    list-style-type: none;
+}
+
+@media (min-width:1200px)
+
+.container_menu {
+	max-width:1140px;
+
+}
+
+@media (min-width: 992px)
+.container_menu {
+    max-width: 960px;
+}
+
+@media (min-width: 768px)
+.container_menu {
+    max-width: 720px;
+}
+
+@media (min-width: 576px)
+.container_menu {
+    max-width: 540px;
+}
