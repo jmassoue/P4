@@ -30,28 +30,22 @@
 			<h1 class="justify-content-center title"> Connexion</h1>
 			<div class="login row">
 				<div offset-md-2 col-md-4 logAdmin justify-content-center>
-					<form action="index.php?action=log">
-						<p>
-							Espace membre
-							<br>
-						</p>
-						<label for="memberForm">Identifiant</label>
-						<br>
-						<input type="text"  id="memberForm" placeholder="Utilisateur" name="pseudo" width="30%" required>
-						<br>
-						<label for="mdpForm">Mot de passe</label>
-						<br>
-						<input type="password" name="password" id="mdpForm" placeholder="********" required>
-						<br>
-						<input type="submit" name="action" value="Connexion">
-					</form>
-				</div> 
 						<form action="index.php?action=log" method="post">
-							<input type="text" name="pseudo">
-							<input type="password" name="password">
-							<input type="submit">
+							<p>
+								Espace membre
+								<br>
+							</p>
+							<label for="memberForm">Identifiant</label>
+							<br>
+							<input type="text" name="pseudo" placeholder="Utilisateur" width="30%" required>
+							<br>
+							<label for="mdpForm">Mot de passe</label>
+							<br>
+							<input type="password" name="password" placeholder="********" required>
+							<br>
+							<input type="submit" value="Connexion">
 						</form>
-
+				</div> 
 				<div class="logAdmin offset-md-2 col-md-4 row">
 					<form action="index.php?action=newMember" method="post">
 						<p>
