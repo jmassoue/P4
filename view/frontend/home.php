@@ -25,7 +25,7 @@
 					<div class="news col-lg-5">
 						<h2>
 							<?= htmlspecialchars($post['title']) ?> <br>
-							<h4 id="date"> le <?= $post['date_creation'] ?></h4>
+							<h4 class="date"> le <?= $post['date_creation'] ?></h4>
 						</h2>
 
 						<p>

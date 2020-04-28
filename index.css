@@ -19,7 +19,7 @@ body
 
 .footer{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
     background-color:#2980b9;
 }
 
@@ -30,6 +30,13 @@ h1 {
 
 h2 {
     color: #007bff;
+}
+
+h3 {
+    color :#2980b9;
+    text-decoration-line: underline;
+    background-color: transparent;
+    text-align: center;
 }
 
 /* Menu */
@@ -114,7 +121,7 @@ a#commentaires {
     background-color: transparent; 
 }
 
-#date {
+.date {
     color :#2980b9;
     text-decoration-line: underline;
     background-color: transparent; 
@@ -187,6 +194,73 @@ li{
     text-align: center;
     list-style-type: none;
 }
+
+/* article et commentaires*/
+
+.containerNew{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contentNew{
+    border: 1px solid #007bff;
+    border-radius: 30px;
+    height: 250px;
+    margin-bottom: 20px;
+    background-color: rgba(240,244,245,10);
+    overflow: auto;
+    text-align: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.contentNew a{
+    text-decoration: none;
+    background-color: transparent;
+    color:#007bff;
+}
+
+.addComment{
+    border:1px solid #007bff;
+    border-radius: 30px;
+    background-color: rgba(240,244,245,10);
+    width: 400px;
+    height: 300px;
+    overflow:auto;
+    text-align: center;
+}
+
+.comment{
+    border:1px solid #007bff;
+    border-radius: 30px;
+    background-color: rgba(240,244,245,10);
+    width: 400px;
+    height: 300px;
+    overflow:auto;
+    text-align: center;
+}
+
+.dateComment{
+    color :#2980b9;
+    text-decoration-line: underline;
+    background-color: transparent;
+    text-align: center;
+}
+
+.comment a{
+    text-decoration: none;
+    background-color: transparent;
+    color:#007bff;
+}
+
+strong{
+    color:#007bff;
+}
+
 
 @media (min-width:1200px)
 
