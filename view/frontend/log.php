@@ -26,10 +26,10 @@
 	</head>
 
 	<body>
-		<div class="container log">
+		<div class="containerLog">
 			<h1 class="justify-content-center title"> Connexion</h1>
-			<div class="login row">
-				<div offset-md-2 col-md-4 logAdmin justify-content-center>
+			<div class="loginPage">
+				<div class="offset-md-2 col-md-4 logMember justify-content-center">
 						<form action="index.php?action=log" method="post">
 							<p>
 								Espace membre
@@ -46,7 +46,7 @@
 							<input type="submit" value="Connexion">
 						</form>
 				</div> 
-				<div class="logAdmin offset-md-2 col-md-4 row">
+				<div class="logNewUser offset-md-2 col-md-4 row">
 					<form action="index.php?action=newMember" method="post">
 						<p>
 							Inscription

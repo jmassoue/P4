@@ -39,6 +39,10 @@ h3 {
     text-align: center;
 }
 
+strong{
+    color:#007bff;
+}
+
 /* Menu */
 
 
@@ -257,9 +261,59 @@ li{
     color:#007bff;
 }
 
-strong{
-    color:#007bff;
+/*Page de connexion*/
+
+.containerLog{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
+
+.loginPage{
+    border:1px solid black;
+    background-color:#0b6e81;
+    margin-bottom: 30px;
+    padding-bottom: 100px;
+    width: 100%;
+    margin-left: 0px;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.logMember{
+    background-color:rgba(240,244,245,10);
+    border-radius: 10px;
+    border:1px solid black;
+    height: 350px;
+    margin:auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.logMember form{
+    color: #2980b9;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.logNewUser{
+    background-color:rgba(240,244,245,10);
+    border-radius: 10px;
+    border:1px solid black;
+    height: 350px;
+    margin:auto;
+    margin-top: 100px;
+    justify-content:center;
+}
+
+.logNewUser form{
+    color: #2980b9;
+    font-size: 1.3em;
+    text-align: center;
+}
+
 
 
 @media (min-width:1200px)
