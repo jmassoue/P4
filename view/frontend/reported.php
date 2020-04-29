@@ -9,7 +9,7 @@
 
 	<body>
 		
-		<p> Votre signalement a bien était pris en compte</p>
+		<p class="commentReport"> Votre signalement a bien était pris en compte</p>
 
 		<footer class="col-lg-12 footer">
 			<?php include("view/include/footer.php"); ?>

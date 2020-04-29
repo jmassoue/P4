@@ -43,6 +43,10 @@ strong{
     color:#007bff;
 }
 
+.commentReport{
+    text-align: center;
+}
+
 /* Menu */
 
 
@@ -313,6 +317,37 @@ li{
     font-size: 1.3em;
     text-align: center;
 }
+
+/* Modifier un post 
+
+
+.containerPost{ 
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.containerUpdatePost{
+    background-color:rgba(240,244,245,10);
+    border-radius: 10px;
+    border:1px solid black;
+    height: 350px;
+    margin:auto;
+    margin-top: 100px;
+    justify-content:center;
+}
+
+.containerUpdatePost form{
+    color: #2980b9;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+*/
+
+
+
 
 
 

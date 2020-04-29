@@ -10,7 +10,7 @@
 
 	<body>
 		
-		<p> L'article a bien été supprimer </p>
+		<p class="commentReport"> L'article a bien été supprimer </p>
 
 	<footer class="col-lg-12 footer">
 		<?php include("view/include/footer.php"); ?>

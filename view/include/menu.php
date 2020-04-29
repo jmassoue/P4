@@ -28,7 +28,7 @@
             <div class="chapter justify-content-center">
                 <ul>
                     <li>
-                        <a href="../../index.php?action=postViewId&id_post=20" class="everyPosts nav-link">Chapitre X</a>
+                        <a href="../../index.php?action=postViewId&id_post=21" class="everyPosts nav-link">Chapitre X</a>
                     </li>
                 </ul>
             </div>
