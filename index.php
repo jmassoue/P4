@@ -63,8 +63,12 @@ class Routeur{
 			}
 				
 			elseif ($_GET['action'] === 'delete') {
-				$this->frontController->delete();
-				
+				if($_SESSION['role_id'] === 1) {
+					$this->frontController->delete();
+				}
+				else{ 
+					$this->frontController->postcommentsView();
+					}
 			}
 			elseif ($_GET['action'] === 'addPost') {
 				$this->frontController->addPosts();
