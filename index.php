@@ -50,7 +50,7 @@ class Routeur{
 				}
 			}
 			elseif ($_GET['action'] === 'update') {
-				if($_SESSION['role_id'] === 1) {
+				if($_SESSION['role_id'] === '1') {
 					if(isset($_GET['id_post']) && $_GET['id_post'] > 0) {
 					$this->frontController->update($_GET['id_post']);
 					}else{ // si id_post <=0
@@ -63,7 +63,7 @@ class Routeur{
 			}
 				
 			elseif ($_GET['action'] === 'delete') {
-				if($_SESSION['role_id'] === 1) {
+				if($_SESSION['role_id'] === '1') {
 					$this->frontController->delete();
 				}
 				else{ 

@@ -19,7 +19,10 @@
         <p>
             <?= nl2br(html_entity_decode($postViewId['content'])) ?>
         </p>
-        <a href="index.php?action=update&amp;id_post=<?= $postViewId['id_post']?>" > Modifier</a> | <a href="index.php?action=delete&amp;id_post=<?= $postViewId['id_post']?>" > Supprimer</a>
+        <?php if($_SESSION['role_id'] === '1') { ?>
+<a href="index.php?action=update&amp;id_post=<?= $postViewId['id_post']?>" > Modifier</a> | <a href="index.php?action=delete&amp;id_post=<?= $postViewId['id_post']?>" > Supprimer</a>
+<?php } ?>
+
         </div>
     </div>
     <div class="row justify-content-center containerComment">
