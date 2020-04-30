@@ -9,7 +9,7 @@
 
         <h2>Posts</h2>
 
-        <form action="index.php?action=addPost" method="post">
+        <form class="containerPost" action="index.php?action=addPost" method="post">
             <div>
                 <label for="user_id"></label><br />
                 <input type="text" name="user_id">

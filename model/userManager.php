@@ -48,8 +48,10 @@ class UserManager extends ModelManager {
           $reqUser->execute(array($pseudo));
 
           $dataUser = $reqUser->fetch(PDO::FETCH_OBJ);
+          var_dump($dataUser); die;
           $_SESSION['id'] = $dataUser->id;
           $_SESSION['pseudo'] = $dataUser->pseudo;
+          $_SESSION['role_id'] = $dataUser->role_id;
 
           header('Location: index.php');
 

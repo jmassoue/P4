@@ -327,10 +327,20 @@ li{
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+
+}
+
+.containerPost form{
+    color: #2980b9;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.containerPost textarea{
+    width: 50%;
 }
 .containerUpdatePost{
-    background-color:rgba(240,244,245,10);
-    border-radius: 10px;
+    
     border:1px solid black;
     height: 350px;
     margin:auto;
@@ -344,8 +354,12 @@ li{
     text-align: center;
 }
 
-*/
+.containerUpdatePost textarea{
+    width:50%;
+}
 
+
+*/
 
 
 
