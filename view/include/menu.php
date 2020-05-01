@@ -1,3 +1,7 @@
+<?php 
+session_start();
+
+?>
 <!DOCTYPE html> 
 <html lang="fr">
 
@@ -25,6 +29,22 @@
     <div class="container_sommaire"> 
          <h1>Les chapitres de mon aventures</h1> 
          <div class="EveryPosts"> 
+            <div class="chapter justify-content-center">
+                <ul>
+                    <li>
+                        <?php if($_SESSION['role_id'] === '1') { ?>
+                            <a href="../../index.php?action=comReported" class="everyPosts nav-link">Voir les commentaires signaler</a><?php } ?>
+                    </li>
+                </ul>
+            </div>
+            <div class="chapter justify-content-center">
+                <ul>
+                    <li>
+                        <?php if($_SESSION['role_id'] === '1') { ?>
+                            <a href="../../index.php?action=addPost" class="everyPosts nav-link">Créer un post</a><?php } ?>
+                    </li>
+                </ul>
+            </div>
             <div class="chapter justify-content-center">
                 <ul>
                     <li>

@@ -59,8 +59,16 @@ class Frontend
 		$postViewId = $this->postManager->getPost($_GET['id_post']);
 		$commentsId = $this->commentManager->getComments($_GET['id_post']);
 		
+		
 
 	require('view/frontend/postView.php');
+	}
+
+	public function commentReportedView(){
+
+		$commentsReport =$this->commentManager->getCommentsReported();
+
+	require('view/frontend/comReportedView.php');
 	}
 
 	public function addComment($postId, $user_id, $content){

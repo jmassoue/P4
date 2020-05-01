@@ -49,6 +49,13 @@ class Routeur{
 					$this->frontController->postHome();
 				}
 			}
+			elseif ($_GET['action'] === 'comReported') {
+				if($_SESSION['role_id'] === '1') {
+					$this->frontController->commentReportedView();
+				}else{ // si id_post <= 0
+					$this->frontController->postHome();
+				}
+			}	
 			elseif ($_GET['action'] === 'update') {
 				if($_SESSION['role_id'] === '1') {
 					if(isset($_GET['id_post']) && $_GET['id_post'] > 0) {
