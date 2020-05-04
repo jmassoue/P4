@@ -27,7 +27,7 @@
 
 	<body>
 		<div class="containerLog">
-			<h1 class="justify-content-center title"> Connexion</h1>
+			<h1 class="justify-content-center title">Connexion</h1>
 			<div class="loginPage">
 				<div class="offset-md-2 col-md-4 logMember justify-content-center">
 						<form action="index.php?action=log" method="post">

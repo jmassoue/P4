@@ -26,6 +26,8 @@ class UserManager extends ModelManager {
         $addMember = $db->prepare('INSERT INTO membres(pseudo, password, date_inscription, role_id) VALUES(?, ?, NOW(), 2)');
 
         $addMember->execute(array($pseudo, $password));
+
+        echo('Inscription validé');
     
         return $addMember;
 

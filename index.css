@@ -47,6 +47,7 @@ strong{
     text-align: center;
 }
 
+
 /* Menu */
 
 
@@ -318,52 +319,52 @@ li{
     text-align: center;
 }
 
-/* Modifier un post 
 
+/* Ajouter un post et modifier un post*/
 
-.containerPost{ 
+.containerUpdatePost{
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-
 }
 
-.containerPost form{
-    color: #2980b9;
-    font-size: 1.3em;
-    text-align: center;
+.updatePage{
+    border:1px solid black;
+    background-color:#0b6e81;
+    margin-bottom: 30px;
+    padding-bottom: 100px;
+    width: 100%;
+    margin-left: 0px;
+    display:flex;
+    flex-wrap: wrap;
 }
 
-.containerPost textarea{
-    width: 50%;
-}
-.containerUpdatePost{
-    
+.updatePost{
+    background-color:rgba(240,244,245,10);
+    border-radius: 10px;
     border:1px solid black;
     height: 350px;
     margin:auto;
     margin-top: 100px;
-    justify-content:center;
+    text-align: center;
 }
 
-.containerUpdatePost form{
+.updatePost form{
     color: #2980b9;
     font-size: 1.3em;
     text-align: center;
+}
+
+.titleUpdate{
+    text-align: center;
+    color: #2980b9;
 }
 
 .containerUpdatePost textarea{
     width:50%;
 }
-
-
-*/
-
-
-
-
 
 @media (min-width:1200px)
 

@@ -3,5 +3,6 @@
 <script>
     tinymce.init({
       selector: '#postmce'
+      content_css : 'index.css'
     });
 </script>
