@@ -25,7 +25,7 @@
                             <textarea type="text" id="postmce" name="content"></textarea>
                         </div>
                         <div>
-                            <input type="submit" />
+                            <input type="submit" class="valider"/>
                         </div>
                     </form> 
                 </div>

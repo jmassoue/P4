@@ -2,7 +2,6 @@
 <script src="https://cdn.tiny.cloud/1/gbftf93z0jc978psilh84scau615kw9wzp7qjsucw40n77lx/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
     tinymce.init({
-      selector: '#postmce'
-      content_css : 'index.css'
+      selector: '#postmce', height:250
     });
 </script>

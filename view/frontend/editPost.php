@@ -22,8 +22,10 @@
                             <label for="content">Contenue</label><br />
                             <textarea type="text" id="postmce" name="content"><?= $editPost['content'] ?></textarea>
                         </div>
+                        <br>
+                        <br>
                         <div>
-                            <input type="submit" />
+                            <input type="submit" class="valider"/>
                         </div>
                     </form> 
                 </div>

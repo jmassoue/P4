@@ -345,7 +345,7 @@ li{
     background-color:rgba(240,244,245,10);
     border-radius: 10px;
     border:1px solid black;
-    height: 350px;
+    height: 500px;
     margin:auto;
     margin-top: 100px;
     text-align: center;
@@ -362,8 +362,8 @@ li{
     color: #2980b9;
 }
 
-.containerUpdatePost textarea{
-    width:50%;
+.valider{
+    margin-top: 5px;
 }
 
 @media (min-width:1200px)
