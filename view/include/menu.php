@@ -20,7 +20,11 @@ session_start();
         <div class="container menu">
             <nav class="nav justify-content-center nav-pills nav-justified">
                 <a href="../../index.php" class="nav-link focus nav-item">Accueil</a>
+                <?php if(isset($_SESSION['pseudo']) != NULL) { ?>
+                <a href="../../index.php?action=newMember" class="nav-link nav-item">Déconnexion</a>    
+                <?php } else { ?>
                 <a href="../../index.php?action=newMember" class="nav-link nav-item">Connexion</a>
+                <?php } ?>
             </nav>
         </div>
     </head>
