@@ -368,24 +368,24 @@ li{
 
 
 
-@media (min-width:1200px)
+@media (min-width:1200px){
 
 .container_menu {
     max-width:1140px;
 
-}
+}}
 
-@media (min-width: 992px)
+@media (min-width: 992px){
 .container_menu {
     max-width: 960px;
-}
+}}
 
-@media (min-width: 768px)
+@media (min-width: 768px){
 .container_menu {
     max-width: 720px;
-}
+}}
 
-@media (min-width: 576px)
+@media (min-width: 576px){
 .container_menu {
     max-width: 540px;
-}
+}}
