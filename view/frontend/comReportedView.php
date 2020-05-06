@@ -10,7 +10,7 @@
 
     <body>
         
-    	<div class="row justify-content-center containerComment">
+    	<div class="row justify-content-center">
     		<div class="col-lg-5 comment">
             <?php while($comment = $commentsReport->fetch()):?>
 
