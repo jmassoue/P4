@@ -20,7 +20,12 @@
 				<nav class="nav justify-content-center nav-pills nav-justified" id="menu">
 			 		<a href="index.php" class="nav-link focus nav-item">Accueil</a>
 			 		<a href="view/include/menu.php" class="nav-link focus nav-item">Tout les chapitres !</a>
-			 		<a href="index.php?action=newMember" class="nav-link nav-item">Connexion</a>
+			 		
+			 		<?php if(isset($_SESSION['pseudo']) != NULL) { ?>
+					<a href="index.php?action=newMember" class="nav-link nav-item">Déconnexion</a>	
+					<?php } else { ?>
+					<a href="index.php?action=newMember" class="nav-link nav-item">Connexion</a>
+					<?php } ?>
 				</nav>
 			</div>
 	</head>

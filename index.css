@@ -367,8 +367,7 @@ li{
 }
 
 
-
-@media (min-width:1200px){
+/*@media (min-width:1200px){
 
 .container_menu {
     max-width:1140px;
@@ -388,4 +387,4 @@ li{
 @media (min-width: 576px){
 .container_menu {
     max-width: 540px;
-}}
+}}*/
