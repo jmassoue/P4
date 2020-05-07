@@ -29,6 +29,10 @@ class Routeur{
 				$this->frontController->connexion();
 			}
 
+			elseif ($_GET['action'] === 'disconnect') {
+				$this->frontController->disconnect();
+			}
+
 			elseif ($_GET['action'] === 'addComment') { // ajout d'un commentaire
 				if(isset($_GET['id_post']) && $_GET['id_post']> 0) {
 					if(!empty($_POST['author']) && !empty($_POST['content'])) {

@@ -22,7 +22,7 @@
 			 		<a href="view/include/menu.php" class="nav-link focus nav-item">Tout les chapitres !</a>
 			 		
 			 		<?php if(isset($_SESSION['pseudo']) != NULL) { ?>
-					<a href="index.php?action=newMember" class="nav-link nav-item">Déconnexion</a>	
+					<a href="index.php?action=disconnect" class="nav-link nav-item">Déconnexion</a>	
 					<?php } else { ?>
 					<a href="index.php?action=newMember" class="nav-link nav-item">Connexion</a>
 					<?php } ?>

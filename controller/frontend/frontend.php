@@ -132,8 +132,10 @@ class Frontend
 	require('view/frontend/deletePost.php');
 	}
 
-	public function connect(){
+	public function disconnect(){
+		session_destroy();
 
+		header('Location: index.php?action=postHome');
 	}
 
 }

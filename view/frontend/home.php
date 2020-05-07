@@ -14,7 +14,9 @@
 			
 			<h1 class="col-lg-12"> Les derniers chapitres du blog </h1>
 			<?php
+			if($_SESSION != NULL) {
 			echo('Bonjour: ' . $_SESSION['pseudo']);
+			}
 			?>
 				<br>
 				<?php

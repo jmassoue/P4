@@ -21,7 +21,7 @@ session_start();
             <nav class="nav justify-content-center nav-pills nav-justified">
                 <a href="../../index.php" class="nav-link focus nav-item">Accueil</a>
                 <?php if(isset($_SESSION['pseudo']) != NULL) { ?>
-                <a href="../../index.php?action=newMember" class="nav-link nav-item">Déconnexion</a>    
+                <a href="../../index.php?action=disconnect" class="nav-link nav-item">Déconnexion</a> 
                 <?php } else { ?>
                 <a href="../../index.php?action=newMember" class="nav-link nav-item">Connexion</a>
                 <?php } ?>
@@ -36,16 +36,19 @@ session_start();
             <div class="chapter justify-content-center">
                 <ul>
                     <li>
-                        <?php if($_SESSION['role_id'] === '1') { ?>
-                            <a href="../../index.php?action=comReported" class="everyPosts nav-link">Voir les commentaires signaler</a><?php } ?>
+                        <?php if($_SESSION != NULL) {
+                        if($_SESSION['role_id'] === '1') { ?>
+                            <a href="../../index.php?action=comReported" class="everyPosts nav-link">Voir les commentaires signaler</a><?php } else {} } ?>
+                        
                     </li>
                 </ul>
             </div>
             <div class="chapter justify-content-center">
                 <ul>
                     <li>
-                        <?php if($_SESSION['role_id'] === '1') { ?>
-                            <a href="../../index.php?action=addPost" class="everyPosts nav-link">Créer un post</a><?php } ?>
+                        <?php if($_SESSION != NULL) {
+                         if($_SESSION['role_id'] === '1') { ?>
+                            <a href="../../index.php?action=addPost" class="everyPosts nav-link">Créer un post</a><?php } else {} }?>
                     </li>
                 </ul>
             </div>
