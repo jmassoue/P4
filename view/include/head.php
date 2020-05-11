@@ -11,7 +11,7 @@
 </head>
 
 	<div class="container_menu">
-			<nav class="nav justify-content-center nav-pills nav-justified">
+			<nav class="nav justify-content-center nav-pills nav-justified flex-column flex-sm-row"> <!-- <576 px menu "hamburger" -->
 				<a href="index.php" class="nav-link focus nav-item">Accueil</a>
 				<a href="view/include/menu.php" class="nav-link focus nav-item">Tout les chapitres !</a>
 				

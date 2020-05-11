@@ -6,7 +6,7 @@ class ModelManager{
 
 		try
     	{
-        	$db = new PDO('mysql:host=db5000428102.hosting-data.io;port=3306;dbname=dbs409284;charset=utf8', 'dbu728225', 'John060890!');
+        	$db = new PDO('mysql:host=localhost;dbname=p4;charset=utf8', 'root', '');
     	}
     	catch(Exception $e)
    		{

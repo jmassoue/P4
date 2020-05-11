@@ -17,7 +17,7 @@
 		<title>Billet simple pour l'Alaska</title>
 		
 			<div class="container_menu">
-				<nav class="nav justify-content-center nav-pills nav-justified" id="menu">
+				<nav class="nav justify-content-center nav-pills nav-justified flex-column flex-sm-row">
 			 		<a href="index.php" class="nav-link focus nav-item">Accueil</a>
 			 		<a href="view/include/menu.php" class="nav-link focus nav-item">Tout les chapitres !</a>
 			 		

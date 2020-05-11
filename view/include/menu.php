@@ -18,7 +18,7 @@ session_start();
                 content="Retrouver tous les chapitres de mon livre 'Billet simple pour l'Alaska' pour partager ce magnifique voyage ensemble"/>
     <title>Billet simple pour l'Alaska</title>
         <div class="container menu">
-            <nav class="nav justify-content-center nav-pills nav-justified">
+            <nav class="nav justify-content-center nav-pills nav-justified flex-column flex-sm-row">
                 <a href="../../index.php" class="nav-link focus nav-item">Accueil</a>
                 <?php if(isset($_SESSION['pseudo']) != NULL) { ?>
                 <a href="../../index.php?action=disconnect" class="nav-link nav-item">Déconnexion</a> 
