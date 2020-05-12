@@ -10,8 +10,8 @@ class CommentManager extends ModelManager {
 
 		$commentsId = $db->prepare('SELECT id_comment,content, post_id, author, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment WHERE post_id=? AND reported= false ORDER BY date_creation');
 		$commentsId->execute(array($postId));
-   
-    	return $commentsId;
+		
+		return $commentsId;
 	}
 
 	public function getCommentsReported(){
@@ -20,7 +20,7 @@ class CommentManager extends ModelManager {
 
 		$commentsReport = $db->query('SELECT id_comment,content, post_id, author, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment WHERE reported= true ORDER BY date_creation');
 		
-   		return $commentsReport;
+		return $commentsReport;
 	}
 
 
@@ -29,8 +29,8 @@ class CommentManager extends ModelManager {
 		$db = $this->connectDb();
 
 		$comments = $db->query('SELECT id_comment,content, post_id, author, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment ORDER BY id_comment');
-   
-    	return $comments;
+		
+		return $comments;
 	}
 
 	public function addComments($postId, $author, $content){
@@ -39,7 +39,7 @@ class CommentManager extends ModelManager {
 		$addComments = $db->prepare('INSERT INTO comment(post_id, author, content, date_creation) VALUES(?, ?, ?, NOW())');
 		$affectedLines = $addComments->execute(array($postId, $author, $content));
 		
-    	return $affectedLines;
+		return $affectedLines;
 
 	}
 
@@ -49,20 +49,20 @@ class CommentManager extends ModelManager {
 
 		$reported = $db->prepare('UPDATE comment SET reported = 1 WHERE id_comment = ?'); // 1 = true 0 = false
 		$reported->execute(array($id_comment));
-   
-    	return $reported;
+		
+		return $reported;
 
-    }
+	}
 
-    public function deleteComment(){
+	public function deleteComment(){
 
 		$db = $this->connectDb();
 
 		$deleteComment = $db->prepare('DELETE FROM comment WHERE id_comment = ?');
-   
-    	return $deleteComment;
+		
+		return $deleteComment;
 
-    }
+	}
 
 
 

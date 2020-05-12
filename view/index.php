@@ -1,16 +1,16 @@
 <?php 
 
- ?>
+?>
 <!DOCTYPE html>
 <html lang="fr">
-	<body>
+<body>
 
-		<header>
-			<?php include("include/head.php"); ?>
-		</header>
+	<header>
+		<?php include("include/head.php"); ?>
+	</header>
 
-		<footer class="col-lg-12 footer">
-			<?php include("include/footer.php"); ?>
-		</footer>
-	</body>
+	<footer class="col-lg-12 footer">
+		<?php include("include/footer.php"); ?>
+	</footer>
+</body>
 </html>

@@ -1,7 +1,7 @@
 <?php //routeur
 session_start();
-	require('controller/frontend/frontend.php');
-	
+require('controller/frontend/frontend.php');
+
 class Routeur{
 
 	private $frontController;
@@ -13,31 +13,31 @@ class Routeur{
 
 	public function run(){
 		try{
-		if(isset($_GET['action'])){
+			if(isset($_GET['action'])){
 
 
-			if($_GET['action'] === 'postHome') {
-				
-				$this->frontController->postHome();
-			}
+				if($_GET['action'] === 'postHome') {
+					
+					$this->frontController->postHome();
+				}
 
-			elseif ($_GET['action'] === 'newMember') {
-				$this->frontController->addMember();
-			}
+				elseif ($_GET['action'] === 'newMember') {
+					$this->frontController->addMember();
+				}
 
-			elseif ($_GET['action'] === 'log') {
-				$this->frontController->connexion();
-			}
+				elseif ($_GET['action'] === 'log') {
+					$this->frontController->connexion();
+				}
 
-			elseif ($_GET['action'] === 'disconnect') {
-				$this->frontController->disconnect();
-			}
+				elseif ($_GET['action'] === 'disconnect') {
+					$this->frontController->disconnect();
+				}
 
 			elseif ($_GET['action'] === 'addComment') { // ajout d'un commentaire
-				if(isset($_GET['id_post']) && $_GET['id_post']> 0) {
-					if(!empty($_POST['author']) && !empty($_POST['content'])) {
-						$this->frontController->addComment($_GET['id_post'], $_POST['author'], $_POST['content']);
-					}
+			if(isset($_GET['id_post']) && $_GET['id_post']> 0) {
+				if(!empty($_POST['author']) && !empty($_POST['content'])) {
+					$this->frontController->addComment($_GET['id_post'], $_POST['author'], $_POST['content']);
+				}
 					else { // si tous les champs ne sont pas remplis
 						$this->frontController->postHome();
 					}
@@ -63,23 +63,23 @@ class Routeur{
 			elseif ($_GET['action'] === 'update') {
 				if($_SESSION['role_id'] === '1') {
 					if(isset($_GET['id_post']) && $_GET['id_post'] > 0) {
-					$this->frontController->update($_GET['id_post']);
+						$this->frontController->update($_GET['id_post']);
 					}else{ // si id_post <=0
-					$this->frontController->postHome();
+						$this->frontController->postHome();
 					}
 				}
 				else{
 					$this->frontController->postHome();
 				}
 			}
-				
+			
 			elseif ($_GET['action'] === 'delete') {
 				if($_SESSION['role_id'] === '1') {
 					$this->frontController->delete();
 				}
 				else{ 
 					$this->frontController->postcommentsView();
-					}
+				}
 			}
 			elseif ($_GET['action'] === 'addPost') {
 				$this->frontController->addPosts();
@@ -96,7 +96,7 @@ class Routeur{
 		}else{ // si on a pas de paramètre action
 			$this->frontController->postHome();
 		}
-	
+		
 	}catch(Exception $e){
 		die('Erreur :' .$e->getMessage());
 	}

@@ -19,23 +19,23 @@ class UserManager extends ModelManager {
 
     $userExist = $reqMember->fetch(PDO::FETCH_OBJ); // retourne en tant qu'objet
 
-      if ($userExist != NULL){
-        throw new Exception('Pseudo déjà existant');
-      }
-      else { 
-        $addMember = $db->prepare('INSERT INTO membres(pseudo, password, date_inscription, role_id) VALUES(?, ?, NOW(), 2)');
+    if ($userExist != NULL){
+      throw new Exception('Pseudo déjà existant');
+    }
+    else { 
+      $addMember = $db->prepare('INSERT INTO membres(pseudo, password, date_inscription, role_id) VALUES(?, ?, NOW(), 2)');
 
-        $addMember->execute(array($pseudo, $password));
+      $addMember->execute(array($pseudo, $password));
 
-        echo('Inscription validé');
+      echo('Inscription validé');
+      
+      return $addMember;
+
+    }}
     
-        return $addMember;
-
-      }}
-        
-      
+    
   //  Récupération de l'utilisateur et de son pass hashé
-      
+    
     public function connexion($pseudo, $password){
       
       $db = $this->connectDb();
@@ -70,4 +70,4 @@ class UserManager extends ModelManager {
 
   }
 
-?>
+  ?>
