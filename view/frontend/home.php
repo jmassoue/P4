@@ -25,18 +25,17 @@
 				?>
 				<div class="row">
 					<div class="news col-lg-5">
-						<h2>
-							<?= htmlspecialchars($post['title']) ?> <br>
-							<h4 class="date"> le <?= $post['date_creation'] ?></h4>
-						</h2>
-
+						<h2><?= htmlspecialchars($post['title']) ?></h2> 
+						<br>
+						<h4 class="date"> le <?= $post['date_creation'] ?></h4>
+						
 						<p>
 						<?= nl2br(html_entity_decode($post['content'])); ?>
 
 						<a href ="index.php?action=postViewId&amp;id_post=<?= $post['id_post'] ?>">En savoir plus</a>
 						<br/>
 						</p>
-						<em><a id="commentaires" href="index.php?action=postViewId&amp;id_post=<?= $post['id_post'] ?>">Commentaires</a></em>
+						<em><a class="viewCommentaires" href="index.php?action=postViewId&amp;id_post=<?= $post['id_post'] ?>">Commentaires</a></em>
 					</div> 
 				<?php
 				}

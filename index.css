@@ -124,7 +124,7 @@ img {
     background-color: transparent;
 }
 
-a#commentaires {
+a .viewCommentaires {
     color :#2980b9;
     text-decoration: none;
     background-color: transparent; 
