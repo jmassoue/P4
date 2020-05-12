@@ -1,4 +1,3 @@
-<head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width">
 <link href="public/css/bootstrap.min.css" rel="stylesheet">
@@ -8,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Retrouver tous les chapitres de mon livre 'Billet simple pour l'Alaska' pour partager ce magnifique voyage ensemble"/>
 	<title>Billet simple pour l'Alaska</title>
-</head>
+
 
 	<div class="container_menu">
 			<nav class="nav justify-content-center nav-pills nav-justified flex-column flex-sm-row"> <!-- <576 px menu "hamburger" -->

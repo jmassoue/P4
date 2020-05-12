@@ -29,7 +29,7 @@ session_start();
         </div>
     </head>
 
-    <body>  
+    <session> 
     <div class="container_sommaire"> 
          <h1>Les chapitres de mon aventures</h1> 
          <div class="EveryPosts"> 
@@ -127,5 +127,5 @@ session_start();
     <footer class="col-lg-12 footer">
             <?php include("footer.php"); ?>
         </footer>
-    </body>
+    </session>
 </html>
