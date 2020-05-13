@@ -19,7 +19,7 @@
 	<div class="container_menu">
 		<nav class="nav justify-content-center nav-pills nav-justified flex-column flex-sm-row">
 			<a href="index.php" class="nav-link focus nav-item">Accueil</a>
-			<a href="view/include/menu.php" class="nav-link focus nav-item">Tout les chapitres !</a>
+			<a href="view/include/menu.php" class="nav-link focus nav-item">Tous les chapitres !</a>
 			
 			<?php if(isset($_SESSION['pseudo']) != NULL) { ?>
 				<a href="index.php?action=disconnect" class="nav-link nav-item">Déconnexion</a>	

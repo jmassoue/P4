@@ -31,7 +31,7 @@ session_start();
 
 <session> 
     <div class="container_sommaire"> 
-       <h1>Les chapitres de mon aventures</h1> 
+       <h1>Les chapitres de mon aventure</h1> 
        <div class="EveryPosts"> 
         <div class="chapter justify-content-center">
             <ul>
