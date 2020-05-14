@@ -13,10 +13,6 @@
             <div class="col-lg-5 updatePost justify-content-center">
                 <form class="containerPost" action="index.php?action=addPost" method="post">
                     <div>
-                        <label for="user_id">Id du Post</label><br />
-                        <input type="text" name="user_id">
-                    </div>
-                    <div>
                         <label>Titre</label><br />
                         <input type="text" id="titlePost" name="title" />
                     </div>

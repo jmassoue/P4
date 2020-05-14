@@ -66,14 +66,14 @@ class Frontend
 
 	public function commentReportedView(){
 
-		$commentsReport =$this->commentManager->getCommentsReported();
+		$commentsReport = $this->commentManager->getCommentsReported();
 
 		require('view/frontend/comReportedView.php');
 	}
 
-	public function addComment($postId, $user_id, $content){
+	public function addComment($postId, $author, $content){
 
-		$affectedLines = $this->commentManager->addComments($postId, $user_id, $content);
+		$affectedLines = $this->commentManager->addComments($postId, $author, $content);
 
 		if ($affectedLines === false) {
 			die('Impossible d\'ajouter le commentaire !');
@@ -89,7 +89,7 @@ class Frontend
 	public function addPosts(){
 
 		
-		if(isset($_POST['title']) && !empty($_POST['title']) && isset($_POST['user_id']) &&  !empty($_POST['user_id']) && isset($_POST['content']) && !empty($_POST['content'])) {
+		if(isset($_POST['title']) && !empty($_POST['title']) && isset($_POST['content']) && !empty($_POST['content'])) {
 			
 			if(empty($_POST['title']) || empty($_POST['content'])) {
 				echo('Impossible d\'ajouter l\'article !');
@@ -97,7 +97,7 @@ class Frontend
 
 			}else {
 				
-				$affectedPost = $this->postManager->addPosts($_POST['title'], $_POST['user_id'], $_POST['content']);
+				$affectedPost = $this->postManager->addPosts($_POST['title'], $_POST['content']);
 
 			}}
 			require('view/frontend/addPost.php');
@@ -136,8 +136,8 @@ class Frontend
 			session_destroy();
 
 			header('Location: index.php?action=postHome');
-			}
-
 		}
+
+	}
 
 	?>

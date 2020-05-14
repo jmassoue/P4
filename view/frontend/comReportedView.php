@@ -12,12 +12,12 @@
     
    <div class="row justify-content-center">
       <div class="col-lg-5 comment">
-        <?php while($comment = $commentsReport->fetch()):?>
+        <?php while($commentRpt = $commentsReport->fetch()):?>
 
             <h2>Commentaires signaler</h2>
-            <p><strong><?= htmlspecialchars($comment['author']) ?></strong></p>
-            <p class="dateComment">le <?=$comment['date_creation'] ?></p>
-            <p> <?= nl2br(htmlspecialchars($comment['content'])) ?></p>
+            <p><strong><?= htmlspecialchars($commentRpt['author']) ?></strong></p>
+            <p class="dateComment">le <?=$commentRpt['date_creation'] ?></p>
+            <p> <?= nl2br(htmlspecialchars($commentRpt['content'])) ?></p>
             
         <?php endwhile; ?>
     </div>

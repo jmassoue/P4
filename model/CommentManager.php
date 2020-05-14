@@ -28,7 +28,7 @@ class CommentManager extends ModelManager {
 
 		$db = $this->connectDb();
 
-		$comments = $db->query('SELECT id_comment,content, post_id, author, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment ORDER BY id_comment');
+		$comments = $db->query('SELECT id_comment,content, post_id, author, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM comment ORDER BY date_creation');
 		
 		return $comments;
 	}

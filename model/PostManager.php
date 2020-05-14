@@ -35,11 +35,11 @@ class PostManager extends ModelManager {
 		return $posts;
 	}
 
-	public function addPosts($title, $user_id, $content){
+	public function addPosts($title, $content){
 
 		$db = $this->connectDb();
-		$addPosts = $db->prepare('INSERT INTO post(title, user_id, content, date_creation) VALUES(?, ?, ?, NOW())'); // a la place de ? pour user_ id venir mettre $_SESSION['id']
-		$affectedPost = $addPosts->execute(array($title, $user_id, $content));
+		$addPosts = $db->prepare('INSERT INTO post(title, user_id, content, date_creation) VALUES(?, ?, ?, NOW())'); 
+		$affectedPost = $addPosts->execute(array($title, $_SESSION['id'], $content));
 		
 		return $affectedPost;
 	}
