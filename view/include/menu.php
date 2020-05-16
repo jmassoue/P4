@@ -17,7 +17,9 @@ session_start();
     <meta name="description"
     content="Retrouver tous les chapitres de mon livre 'Billet simple pour l'Alaska' pour partager ce magnifique voyage ensemble"/>
     <title>Billet simple pour l'Alaska</title>
-    <div class="container menu">
+</head>
+
+<header class="container menu">
         <nav class="nav justify-content-center nav-pills nav-justified flex-column flex-sm-row">
             <a href="../../index.php" class="nav-link focus nav-item">Accueil</a>
             <?php if(isset($_SESSION['pseudo']) != NULL) { ?>
@@ -26,10 +28,9 @@ session_start();
                 <a href="../../index.php?action=newMember" class="nav-link nav-item">Connexion</a>
             <?php } ?>
         </nav>
-    </div>
-</head>
+</header>
 
-<session> 
+<section> 
     <div class="container_sommaire"> 
        <h1>Les chapitres de mon aventure</h1> 
         <div class="EveryPosts"> 
@@ -127,5 +128,5 @@ session_start();
         <footer class="col-lg-12 footer">
             <?php include("footer.php"); ?>
         </footer>
-</session>
+</section>
 </html>

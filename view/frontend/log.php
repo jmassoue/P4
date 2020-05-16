@@ -15,8 +15,10 @@
 	<link rel="stylesheet" href="index.css">
 	<meta name="description" content="Retrouver tous les chapitres de mon livre 'Billet simple pour l'Alaska' pour partager ce magnifique voyage ensemble"/>
 	<title>Billet simple pour l'Alaska</title>
-	
-	<div class="container_menu">
+</head>
+
+<body>
+	<header class="container_menu">
 		<nav class="nav justify-content-center nav-pills nav-justified flex-column flex-sm-row">
 			<a href="index.php" class="nav-link focus nav-item">Accueil</a>
 			<a href="view/include/menu.php" class="nav-link focus nav-item">Tous les chapitres !</a>
@@ -27,10 +29,7 @@
 				<a href="index.php?action=newMember" class="nav-link nav-item">Connexion</a>
 			<?php } ?>
 		</nav>
-	</div>
-</head>
-
-<body>
+	</header>
 	<div class="containerLog">
 		<h1 class="justify-content-center title">Connexion</h1>
 		<div class="loginPage">
