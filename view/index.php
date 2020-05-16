@@ -3,11 +3,14 @@
 ?>
 <!DOCTYPE html>
 <html lang="fr">
+
+<head>
+        <?php include("include/head.php"); ?>
+    </head>
+    
 <body>
 
-	<head>
-		<?php include("include/head.php"); ?>
-	</head>
+	
 	
 	<header class="container_menu">
         <nav class="nav justify-content-center nav-pills nav-justified flex-column flex-sm-row"> <!-- <576 px menu "hamburger" -->

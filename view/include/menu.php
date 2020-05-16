@@ -30,6 +30,8 @@ session_start();
         </nav>
 </header>
 
+<body>
+
 <section> 
     <div class="container_sommaire"> 
        <h1>Les chapitres de mon aventure</h1> 
@@ -129,4 +131,5 @@ session_start();
             <?php include("footer.php"); ?>
         </footer>
 </section>
+</body>
 </html>

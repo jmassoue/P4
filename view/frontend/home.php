@@ -50,11 +50,12 @@
 					</p>
 					<em><a class="viewCommentaires" href="index.php?action=postViewId&amp;id_post=<?= $post['id_post'] ?>">Commentaires</a></em>
 				</div> 
+			</div>	
 			<?php
 			}
 			$postsHome->closeCursor();
 			?>
-			</div>		
+				
 	</div>
 	
 	
