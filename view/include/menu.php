@@ -32,100 +32,100 @@ session_start();
 <session> 
     <div class="container_sommaire"> 
        <h1>Les chapitres de mon aventure</h1> 
-       <div class="EveryPosts"> 
-        <div class="chapter justify-content-center">
-            <ul>
-                <li>
-                    <?php if($_SESSION != NULL) {
-                        if($_SESSION['role_id'] === '1') { ?>
+        <div class="EveryPosts"> 
+            <div class="chapter justify-content-center">
+                <ul>
+                    <li>
+                        <?php if($_SESSION != NULL) {
+                            if($_SESSION['role_id'] === '1') { ?>
                             <a href="../../index.php?action=comReported" class="everyPosts nav-link">Voir les commentaires signaler</a><?php } else {} } ?>
                             
-                        </li>
-                    </ul>
-                </div>
-                <div class="chapter justify-content-center">
+                    </li>
+                </ul>
+            </div>
+            <div class="chapter justify-content-center">
                     <ul>
                         <li>
-                            <?php if($_SESSION != NULL) {
-                               if($_SESSION['role_id'] === '1') { ?>
-                                <a href="../../index.php?action=addPost" class="everyPosts nav-link">Créer un post</a><?php } else {} }?>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="chapter justify-content-center">
-                        <ul>
-                            <li>
-                                <a href="../../index.php?action=postViewId&id_post=21" class="everyPosts nav-link">Chapitre X</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="chapter justify-content-center">
-                        <ul>
-                            <li>
-                                <a href="../../index.php?action=postViewId&id_post=19" class="everyPosts nav-link">Chapitre IX</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="chapter justify-content-center">
-                        <ul>
-                            <li>
-                                <a href="../../index.php?action=postViewId&id_post=18" class="everyPosts nav-link">Chapitre VIII</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="chapter justify-content-center">
-                        <ul>
-                            <li>
-                                <a href="../../index.php?action=postViewId&id_post=17" class="everyPosts nav-link">Chapitre VII</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="chapter justify-content-center">
-                        <ul>
-                            <li>
-                                <a href="../../index.php?action=postViewId&id_post=16" class="everyPosts nav-link">Chapitre VI</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="chapter justify-content-center">
-                        <ul>
-                            <li>
-                                <a href="../../index.php?action=postViewId&id_post=15" class="everyPosts nav-link">Chapitre V</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="chapter justify-content-center">
-                        <ul>
-                            <li>
-                                <a href="../../index.php?action=postViewId&id_post=14" class="everyPosts nav-link">Chapitre IV</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="chapter justify-content-center">
-                        <ul>
-                            <li>
-                                <a href="../../index.php?action=postViewId&id_post=13" class="everyPosts nav-link">Chapitre III</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="chapter justify-content-center">
-                        <ul>
-                            <li>
-                                <a href="../../index.php?action=postViewId&id_post=12" class="everyPosts nav-link">Chapitre II</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="chapter justify-content-center">
-                        <ul>
-                            <li>
-                                <a href="../../index.php?action=postViewId&id_post=11" class="everyPosts nav-link">Chapitre I</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>    
+                        <?php if($_SESSION != NULL) {
+                            if($_SESSION['role_id'] === '1') { ?>
+                            <a href="../../index.php?action=addPost" class="everyPosts nav-link">Créer un post</a><?php } else {} }?>
+                    </li>
+                </ul>
             </div>
-            <footer class="col-lg-12 footer">
-                <?php include("footer.php"); ?>
-            </footer>
-        </session>
-        </html>
+            <div class="chapter justify-content-center">
+                    <ul>
+                        <li>
+                            <a href="../../index.php?action=postViewId&id_post=21" class="everyPosts nav-link">Chapitre X</a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="chapter justify-content-center">
+                    <ul>
+                        <li>
+                            <a href="../../index.php?action=postViewId&id_post=19" class="everyPosts nav-link">Chapitre IX</a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="chapter justify-content-center">
+                    <ul>
+                        <li>
+                            <a href="../../index.php?action=postViewId&id_post=18" class="everyPosts nav-link">Chapitre VIII</a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="chapter justify-content-center">
+                    <ul>
+                        <li>
+                            <a href="../../index.php?action=postViewId&id_post=17" class="everyPosts nav-link">Chapitre VII</a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="chapter justify-content-center">
+                    <ul>
+                        <li>
+                            <a href="../../index.php?action=postViewId&id_post=16" class="everyPosts nav-link">Chapitre VI</a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="chapter justify-content-center">
+                        <ul>
+                        <li>
+                            <a href="../../index.php?action=postViewId&id_post=15" class="everyPosts nav-link">Chapitre V</a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="chapter justify-content-center">
+                    <ul>
+                        <li>
+                            <a href="../../index.php?action=postViewId&id_post=14" class="everyPosts nav-link">Chapitre IV</a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="chapter justify-content-center">
+                    <ul>
+                        <li>
+                            <a href="../../index.php?action=postViewId&id_post=13" class="everyPosts nav-link">Chapitre III</a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="chapter justify-content-center">
+                    <ul>
+                        <li>
+                            <a href="../../index.php?action=postViewId&id_post=12" class="everyPosts nav-link">Chapitre II</a>
+                        </li>
+                        </ul>
+            </div>
+            <div class="chapter justify-content-center">
+                    <ul>
+                        <li>
+                            <a href="../../index.php?action=postViewId&id_post=11" class="everyPosts nav-link">Chapitre I</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>    
+    </div>
+        <footer class="col-lg-12 footer">
+            <?php include("footer.php"); ?>
+        </footer>
+</session>
+</html>

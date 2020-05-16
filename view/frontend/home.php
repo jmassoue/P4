@@ -41,7 +41,7 @@
 			}
 			$postsHome->closeCursor();
 			?>
-		</div>		
+			</div>		
 	</div>
 	
 	

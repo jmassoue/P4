@@ -103,39 +103,44 @@ class Frontend
 			require('view/frontend/addPost.php');
 		}
 
-		public function reported($id_comment){
+	public function reported($id_comment){
 
-			$reported = $this->commentManager->reportedComment($id_comment);
+		$reported = $this->commentManager->reportedComment($id_comment);
 			
-			require('view/frontend/reported.php');
+		require('view/frontend/reported.php');
+
 		}
 
-		public function update(){
+	public function update(){
 
-			$editPost = $this->postManager->getPost($_GET['id_post']);
-			if(isset($_POST['title']) &&  !empty($_POST['title']) && isset($_POST['content']) && !empty($_POST['content'])) {
-				$update = $this->postManager->updatePost($_POST['title'], $_POST['content'], $_GET['id_post']);
+		$editPost = $this->postManager->getPost($_GET['id_post']);
+		if(isset($_POST['title']) &&  !empty($_POST['title']) && isset($_POST['content']) && !empty($_POST['content'])) {
+			$update = $this->postManager->updatePost($_POST['title'], $_POST['content'], $_GET['id_post']);
 				
-			}else {
+		}else {
 				echo('aucune modification effectuer');
-			}
-			require('view/frontend/editPost.php');
 		}
 
-		public function delete(){
+		require('view/frontend/editPost.php');
 
-			$deletePost = $this->postManager->getPost($_GET['id_post']);
-			if(isset($_GET['id_post']) && !empty($_GET['id_post'])) {
-				$delete = $this->postManager->deletePost($_GET['id_post']);
-			}
+		}
+
+	public function delete(){
+
+		$deletePost = $this->postManager->getPost($_GET['id_post']);
+		if(isset($_GET['id_post']) && !empty($_GET['id_post'])) {
+			$delete = $this->postManager->deletePost($_GET['id_post']);
+		}
 			
-			require('view/frontend/deletePost.php');
+		require('view/frontend/deletePost.php');
+
 		}
 
-		public function disconnect(){
-			session_destroy();
+	public function disconnect(){
+		session_destroy();
 
-			header('Location: index.php?action=postHome');
+		header('Location: index.php?action=postHome');
+		
 		}
 
 	}
