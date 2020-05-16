@@ -22,7 +22,7 @@
 		</nav>
 	</header>
 
-	<img src="public/images/alaska.jpg" alt="photomontagnealaska" class="alaska col-lg-12">
+	<img src="public/images/alaska.jpg" alt="photomontagnealaska" class="alaska col-lg-12" />
 	<div class="container_post">
 		
 		<h1 class="col-lg-12"> Les derniers chapitres du blog </h1>
@@ -31,22 +31,22 @@
 			echo('Bonjour: ' . $_SESSION['pseudo']);
 		}
 		?>
-		<br>
+		<br />
 		<?php
 		while ($post = $postsHome->fetch())
-		{
+			{
 		?>
 			<div class="row">
 				<div class="news col-lg-5">
 					<h2><?= htmlspecialchars($post['title']) ?></h2> 
-					<br>
+					<br />
 					<h4 class="date"> le <?= $post['date_creation'] ?></h4>
 					
 					<p>
 						<?= nl2br(html_entity_decode($post['content'])); ?>
 
 						<a href ="index.php?action=postViewId&amp;id_post=<?= $post['id_post'] ?>">En savoir plus</a>
-						<br>
+						<br />
 					</p>
 					<em><a class="viewCommentaires" href="index.php?action=postViewId&amp;id_post=<?= $post['id_post'] ?>">Commentaires</a></em>
 				</div> 

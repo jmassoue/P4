@@ -7,13 +7,13 @@
 
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link href="public/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" href="index.css">
-	<meta name="description" content="Retrouver tous les chapitres de mon livre 'Billet simple pour l'Alaska' pour partager ce magnifique voyage ensemble"/>
+	<meta name="description" content="Retrouver tous les chapitres de mon livre 'Billet simple pour l'Alaska' pour partager ce magnifique voyage ensemble" />
 	<title>Billet simple pour l'Alaska</title>
 </head>
 
@@ -37,16 +37,16 @@
 				<form action="index.php?action=log" method="post">
 					<p>
 						Espace membre
-						<br>
+						<br />
 					</p>
 					<label for="memberForm">Identifiant</label>
-					<br>
+					<br />
 					<input type="text" name="pseudo" placeholder="Utilisateur" width="30%" required>
-					<br>
+					<br />
 					<label for="mdpForm">Mot de passe</label>
-					<br>
+					<br />
 					<input type="password" name="password" placeholder="********" required>
-					<br>
+					<br />
 					<input type="submit" value="Connexion">
 				</form>
 			</div> 
@@ -57,14 +57,14 @@
 					</p>
 					<label for="newUser">
 						Identifiant
-						<br>
-						<input type="text" placeholder="Identifiant" name="pseudo" id="newUser" required>
-						<br>
+						<br />
+						<input type="text" placeholder="Identifiant" name="pseudo" id="newUser" required />
+						<br />
 						<label for="newUserMdp">Mot de passe</label>
-						<br>
-						<input type="password" placeholder="********" id="newUserMdp" name="password" required>
-						<br>
-						<input type="submit" value="S'inscrire">
+						<br />
+						<input type="password" placeholder="********" id="newUserMdp" name="password" required />
+						<br />
+						<input type="submit" value="S'inscrire" />
 					</label>
 				</form>
 			</div>

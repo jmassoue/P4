@@ -43,11 +43,13 @@
 
             <form action="index.php?action=addComment&amp;id_post=<?= $postViewId['id_post'] ?>" method="post">
                 <div>
-                    <label for="user_id">Auteur</label><br />
+                    <label for="user_id">Auteur</label>
+                    <br />
                     <input type="text" id="author" name="author" />
                 </div>
                 <div>
-                    <label for="content">Commentaire</label><br />
+                    <label for="content">Commentaire</label>
+                    <br />
                     <textarea id="content" name="content" placeholder="J'adore ce chapitre..."></textarea>
                 </div>
                 <div>

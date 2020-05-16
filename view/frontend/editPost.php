@@ -21,24 +21,26 @@
             <?php } ?>
         </nav>
     </header>
-    
+
     <div class="containerUpdatePost">
         <h2 class="titleUpdate">Posts</h2>
         <div class="updatePage">
             <div class="col-lg-5 updatePost justify-content-center">
                 <form class="containerPost" action="index.php?action=update&amp;id_post=<?= $_GET['id_post']?>" method="post">
                     <div>
-                        <label>Titre</label><br />
-                        <input type="text" id="titlePost" name="title" value="<?= $editPost['title'] ?>"/>
+                        <label>Titre</label>
+                        <br />
+                        <input type="text" id="titlePost" name="title" value="<?= $editPost['title'] ?>" />
                     </div>
                     <div>
-                        <label for="content">Contenue</label><br />
+                        <label for="content">Contenue</label>
+                        <br />
                         <textarea type="text" id="postmce" name="content"><?= $editPost['content'] ?></textarea>
                     </div>
-                    <br>
-                    <br>
+                    <br />
+                    <br />
                     <div>
-                        <input type="submit" class="valider"/>
+                        <input type="submit" class="valider" />
                     </div>
                 </form> 
             </div>
